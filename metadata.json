@@ -1,0 +1,8 @@
+{
+  "name": "Mumbai Moments",
+  "description": "Mumbai's premier bespoke private venue and luxury romantic event designer. An exclusive private property transformed and styled tailored to your dream proposal, anniversary, date night, or milestone.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

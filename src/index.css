@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #FAF7F2;
+    color: #1E1B18;
+  }
+}
+
+.font-serif-display {
+  font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+}
+
+.font-cursive {
+  font-family: 'Alex Brush', 'Great Vibes', cursive;
+}
+
+.font-sans-body {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+/* Custom refined luxury scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F4EDE4;
+}
+::-webkit-scrollbar-thumb {
+  background: #D5C3A8;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C59A5D;
+}
+
+/* AuraWed Luxury Theme Classes */
+.aurawed-bg-pattern {
+  background-color: #FAF7F2;
+  background-image: radial-gradient(#E8DEC8 0.75px, transparent 0.75px), radial-gradient(#E8DEC8 0.75px, #FAF7F2 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
+
+.aurawed-card {
+  background: #FFFFFF;
+  border: 1px solid #EBE2D5;
+  box-shadow: 0 4px 24px -2px rgba(92, 64, 40, 0.05), 0 1px 3px rgba(0, 0, 0, 0.02);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.aurawed-card:hover {
+  border-color: #C59A5D;
+  box-shadow: 0 16px 36px -4px rgba(107, 23, 36, 0.08), 0 4px 12px rgba(197, 154, 93, 0.12);
+  transform: translateY(-3px);
+}
+
+.aurawed-panel {
+  background: #FAF5EE;
+  border: 1px solid #E5D9C8;
+  box-shadow: 0 10px 30px -5px rgba(50, 30, 20, 0.04);
+}
+
+.aurawed-modal {
+  background: #FFFFFF;
+  border: 1px solid #DFCDB7;
+  box-shadow: 0 25px 60px -10px rgba(45, 25, 20, 0.25), 0 0 0 1px rgba(197, 154, 93, 0.15);
+}
+
+.aurawed-pill {
+  background: #F5EFE6;
+  border: 1px solid #E4D7C5;
+  color: #4A3E39;
+  transition: all 0.25s ease;
+}
+.aurawed-pill:hover {
+  background: #EDE2D2;
+  border-color: #C59A5D;
+  color: #1E1B18;
+}
+
+.aurawed-pill-active {
+  background: linear-gradient(135deg, #6B1724 0%, #4A0E18 100%);
+  color: #FFFFFF;
+  border-color: #6B1724;
+  box-shadow: 0 4px 14px rgba(107, 23, 36, 0.25);
+}
+
+.aurawed-pill-gold-active {
+  background: linear-gradient(135deg, #C59A5D 0%, #DFB776 100%);
+  color: #1A150E;
+  border-color: #C59A5D;
+  box-shadow: 0 4px 14px rgba(197, 154, 93, 0.3);
+}
+
+.aurawed-button-primary {
+  background: linear-gradient(135deg, #6B1724 0%, #4D0E19 100%);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 18px rgba(107, 23, 36, 0.22);
+  transition: all 0.25s ease;
+}
+.aurawed-button-primary:hover {
+  background: linear-gradient(135deg, #7F1D2C 0%, #5E1220 100%);
+  box-shadow: 0 6px 24px rgba(107, 23, 36, 0.32);
+  transform: translateY(-1px);
+}
+
+.aurawed-button-gold {
+  background: linear-gradient(135deg, #C59A5D 0%, #DFB776 50%, #B88947 100%);
+  color: #18140E;
+  font-weight: 700;
+  box-shadow: 0 4px 16px rgba(197, 154, 93, 0.28);
+  transition: all 0.25s ease;
+}
+.aurawed-button-gold:hover {
+  filter: brightness(1.05);
+  box-shadow: 0 6px 22px rgba(197, 154, 93, 0.38);
+  transform: translateY(-1px);
+}
+
+.aurawed-button-secondary {
+  background: #FFFFFF;
+  border: 1px solid #D9C8B4;
+  color: #3B332E;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s ease;
+}
+.aurawed-button-secondary:hover {
+  background: #FAF5EE;
+  border-color: #C59A5D;
+  color: #1E1B18;
+}
+
+.aurawed-input {
+  background: #FFFFFF;
+  border: 1px solid #DCD0BF;
+  color: #1E1B18;
+  transition: all 0.2s ease;
+}
+.aurawed-input:focus {
+  border-color: #C59A5D;
+  box-shadow: 0 0 0 3px rgba(197, 154, 93, 0.18);
+}
+
+.gold-text-gradient {
+  background: linear-gradient(135deg, #8E682E 0%, #C59A5D 50%, #7A5722 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.burgundy-text-gradient {
+  background: linear-gradient(135deg, #6B1724 0%, #9B283A 50%, #4D0E19 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.luxury-arch {
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+}
+
+.gold-badge {
+  background: #FAF2E4;
+  border: 1px solid #D9BF91;
+  color: #8C6226;
+}
+
+.wine-badge {
+  background: #F9ECEE;
+  border: 1px solid #E5BAC1;
+  color: #6B1724;
+}
