@@ -1,40 +1,40 @@
 import { useState, useEffect } from 'react';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import {
-  Occasion,
-  VenueSpaceArea,
-  DesignThemeStyle,
-  DiningStyle,
+  BespokeExperienceConfig,
   VenueTransformationTheme,
-  BespokeExperienceConfig
+  VenueSpaceArea,
+  Occasion
 } from './types';
 import { VENUE_THEMES } from './data/venueData';
 import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
-import { WhyPrivateSection } from './components/WhyPrivateSection';
-import { EstateOverviewSection } from './components/EstateOverviewSection';
-import { ExperienceBuilder } from './components/ExperienceBuilder';
-import { LoveAIStudio } from './components/LoveAIStudio';
-import { TargetAreasSection } from './components/TargetAreasSection';
-import { VenueThemesSection } from './components/VenueThemesSection';
-import { VenueSpacesSection } from './components/VenueSpacesSection';
-import { OccasionsSection } from './components/OccasionsSection';
-import { LookbookSection } from './components/LookbookSection';
-import { ThemeDetailModal } from './components/ThemeDetailModal';
-import { BespokeInquiryModal } from './components/BespokeInquiryModal';
-import { SavedMomentsDrawer } from './components/SavedMomentsDrawer';
-import { InfoModals, InfoModalType } from './components/InfoModals';
-import { LoveAIConciergeModal } from './components/LoveAIConciergeModal';
 import { Footer } from './components/Footer';
+import { ScrollToTop } from './components/ScrollToTop';
+import { BespokeInquiryModal } from './components/BespokeInquiryModal';
+import { LoveAIConciergeModal } from './components/LoveAIConciergeModal';
+import { InfoModals, InfoModalType } from './components/InfoModals';
 import { Sparkles, Heart } from 'lucide-react';
 
+// Pages
+import { HomePage } from './pages/HomePage';
+import { SpacesPage } from './pages/SpacesPage';
+import { ThemesPage } from './pages/ThemesPage';
+import { BuilderPage } from './pages/BuilderPage';
+import { LoveAIPage } from './pages/LoveAIPage';
+import { OccasionsPage } from './pages/OccasionsPage';
+import { LocationsPage } from './pages/LocationsPage';
+import { LookbookPage } from './pages/LookbookPage';
+import { BookPage } from './pages/BookPage';
+import { SavedPage } from './pages/SavedPage';
+
 export default function App() {
-  // Experience Builder prefill / active configuration
+  const navigate = useNavigate();
+
+  // Active config for the builder / inquiry modal
   const [activeConfig, setActiveConfig] = useState<BespokeExperienceConfig | null>(null);
 
-  // Modals & Drawers state
-  const [activeTheme, setActiveTheme] = useState<VenueTransformationTheme | null>(null);
+  // Modals state
   const [isInquiryModalOpen, setIsInquiryModalOpen] = useState(false);
-  const [isSavedDrawerOpen, setIsSavedDrawerOpen] = useState(false);
   const [isLoveAIConciergeOpen, setIsLoveAIConciergeOpen] = useState(false);
   const [infoModalType, setInfoModalType] = useState<InfoModalType>(null);
 
@@ -70,65 +70,7 @@ export default function App() {
     setSavedThemeIds([]);
   };
 
-  const savedThemes = VENUE_THEMES.filter((t) => savedThemeIds.includes(t.id));
-
-  const scrollToSection = (sectionId: string) => {
-    const el = document.getElementById(sectionId);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
-
-  const handleSelectThemeForCustomization = (theme: VenueTransformationTheme) => {
-    setActiveConfig((prev) => ({
-      ...(prev || {
-        occasion: 'Proposal',
-        spaceArea: theme.spaceArea,
-        themeStyle: theme.themeStyle,
-        diningStyle: '5-Course Private Chef Gourmet Tasting',
-        selectedAddOnIds: ['addon-violinist', 'addon-photographer'],
-        customRequests: '',
-        preferredSlot: '7:30 PM – Starlight Candlelight'
-      }),
-      themeStyle: theme.themeStyle,
-      spaceArea: theme.spaceArea
-    }));
-    scrollToSection('experience-builder');
-  };
-
-  const handleSelectSpaceForBuilder = (spaceArea: VenueSpaceArea) => {
-    setActiveConfig((prev) => ({
-      ...(prev || {
-        occasion: 'Proposal',
-        spaceArea,
-        themeStyle: 'Celestial Candlelight & Fairy Lights',
-        diningStyle: '5-Course Private Chef Gourmet Tasting',
-        selectedAddOnIds: ['addon-violinist', 'addon-photographer'],
-        customRequests: '',
-        preferredSlot: '7:30 PM – Starlight Candlelight'
-      }),
-      spaceArea
-    }));
-    scrollToSection('experience-builder');
-  };
-
-  const handleSelectOccasionForBuilder = (occasion: Occasion) => {
-    setActiveConfig((prev) => ({
-      ...(prev || {
-        occasion,
-        spaceArea: 'The Starlit Rooftop Deck',
-        themeStyle: 'Grand Illuminations Proposal Marquee',
-        diningStyle: '5-Course Private Chef Gourmet Tasting',
-        selectedAddOnIds: ['addon-cold-pyro', 'addon-marquee-letters', 'addon-photographer'],
-        customRequests: '',
-        preferredSlot: '7:30 PM – Starlight Candlelight'
-      }),
-      occasion
-    }));
-    scrollToSection('experience-builder');
-  };
-
-  const handleApplyAIConfigToBuilder = (aiConfig: Partial<BespokeExperienceConfig>) => {
+  const handleApplyConfigToBuilder = (config: Partial<BespokeExperienceConfig>) => {
     setActiveConfig((prev) => ({
       ...(prev || {
         occasion: 'Proposal',
@@ -139,9 +81,9 @@ export default function App() {
         customRequests: '',
         preferredSlot: '7:30 PM – Starlight Candlelight'
       }),
-      ...aiConfig
+      ...config
     }));
-    scrollToSection('experience-builder');
+    navigate('/builder');
   };
 
   const handleBookFromConfig = (config: BespokeExperienceConfig) => {
@@ -149,88 +91,123 @@ export default function App() {
     setIsInquiryModalOpen(true);
   };
 
+  const openInquiry = () => setIsInquiryModalOpen(true);
+
   return (
     <div className="min-h-screen bg-[#FCFAF7] text-[#1E1B18] font-sans selection:bg-[#6B1724] selection:text-white relative overflow-hidden">
+      <ScrollToTop />
+
       {/* Ambient warm luxury background glow */}
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-        <div className="absolute -top-40 -left-40 w-[600px] h-[600px] bg-[#C59A5D]/8 rounded-full blur-[140px]" />
-        <div className="absolute top-1/3 -right-40 w-[500px] h-[500px] bg-[#6B1724]/5 rounded-full blur-[160px]" />
-        <div className="absolute bottom-1/4 left-1/4 w-[600px] h-[600px] bg-[#E5D9C8]/40 rounded-full blur-[180px]" />
+        <div className="absolute -top-40 -left-40 w-[600px] h-[600px] bg-[#C59A5D]/6 rounded-full blur-[140px]" />
+        <div className="absolute top-1/3 -right-40 w-[500px] h-[500px] bg-[#6B1724]/4 rounded-full blur-[160px]" />
+        <div className="absolute bottom-1/4 left-1/4 w-[600px] h-[600px] bg-[#E5D9C8]/35 rounded-full blur-[180px]" />
       </div>
 
-      {/* Navigation Bar */}
+      {/* Navigation */}
       <Navbar
-        onOpenInquiry={() => setIsInquiryModalOpen(true)}
-        onOpenSaved={() => setIsSavedDrawerOpen(true)}
+        onOpenInquiry={openInquiry}
+        onOpenSaved={() => navigate('/saved')}
         savedCount={savedThemeIds.length}
-        onNavigateSection={scrollToSection}
       />
 
-      {/* Main Content Sections */}
+      {/* Main Content — all pages */}
       <main className="relative z-10">
-        {/* 1. Hero Section: Private Venue & Bespoke Studio */}
-        <Hero
-          onStartDesigning={() => scrollToSection('experience-builder')}
-          onExploreSetups={() => scrollToSection('venue-themes')}
-          onOpenLoveAI={() => scrollToSection('love-ai-studio')}
-        />
-
-        {/* 2. Why 100% Private Venue (Value Proposition vs Crowded Public Restaurants) */}
-        <WhyPrivateSection onOpenInquiry={() => setIsInquiryModalOpen(true)} />
-
-        {/* 3. The Estate Overview (Architecture, Amenities & Standard Inclusions) */}
-        <EstateOverviewSection
-          onOpenInquiry={() => setIsInquiryModalOpen(true)}
-          onExploreThemes={() => scrollToSection('venue-themes')}
-        />
-
-        {/* 4. Targeted Mumbai Romance Corridors (Sion, Dadar, Kurla, Mahim, Wadala, Chembur) */}
-        <TargetAreasSection
-          onSelectAreaForBuilder={(area) => {
-            handleApplyAIConfigToBuilder({
-              spaceArea: area.recommendedSpace,
-              themeStyle: area.recommendedTheme,
-              selectedAddOnIds: area.suggestedAddOns,
-              targetNeighborhood: area.id,
-              customRequests: `VIP Chauffeured pickup from ${area.name}.`
-            });
-          }}
-          onApplyConfigToBuilder={handleApplyAIConfigToBuilder}
-          onNavigateSection={scrollToSection}
-        />
-
-        {/* 5. Interactive Bespoke Experience Builder (Studio Configurator) */}
-        <ExperienceBuilder
-          onBookExperience={handleBookFromConfig}
-          onSelectTheme={setActiveTheme}
-          onOpenLoveAI={() => scrollToSection('love-ai-studio')}
-        />
-
-        {/* 5. Aura Love AI Automation Studio (Proposal Speeches, Custom Timelines & Vibe Matcher) */}
-        <LoveAIStudio
-          onApplyConfigToBuilder={handleApplyAIConfigToBuilder}
-          onNavigateSection={scrollToSection}
-        />
-
-        {/* 6. Custom Transformation Themes & Setups Gallery */}
-        <VenueThemesSection
-          onSelectTheme={setActiveTheme}
-          onCustomizeTheme={handleSelectThemeForCustomization}
-          savedThemeIds={savedThemeIds}
-          onToggleSaveTheme={toggleSaveTheme}
-        />
-
-        {/* 7. Private Estate Zones & Spaces (Glasshouse, Sky Deck, Cabana, Courtyard) */}
-        <VenueSpacesSection onSelectSpaceForBuilder={handleSelectSpaceForBuilder} />
-
-        {/* 8. Milestone Occasions Tailored (Proposals, Anniversaries, Date Nights, etc.) */}
-        <OccasionsSection onSelectOccasionForBuilder={handleSelectOccasionForBuilder} />
-
-        {/* 9. Lookbook of Real Transformations & FAQs */}
-        <LookbookSection onOpenInquiry={() => setIsInquiryModalOpen(true)} />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <HomePage
+                onOpenInquiry={openInquiry}
+                savedThemeIds={savedThemeIds}
+                onToggleSaveTheme={toggleSaveTheme}
+              />
+            }
+          />
+          <Route
+            path="/spaces"
+            element={<SpacesPage onOpenInquiry={openInquiry} />}
+          />
+          <Route
+            path="/themes"
+            element={
+              <ThemesPage
+                savedThemeIds={savedThemeIds}
+                onToggleSaveTheme={toggleSaveTheme}
+                onOpenInquiry={openInquiry}
+              />
+            }
+          />
+          <Route
+            path="/builder"
+            element={
+              <BuilderPage
+                onBookExperience={handleBookFromConfig}
+                onOpenInquiry={openInquiry}
+              />
+            }
+          />
+          <Route
+            path="/ai-studio"
+            element={
+              <LoveAIPage
+                onApplyConfigToBuilder={handleApplyConfigToBuilder}
+                onOpenInquiry={openInquiry}
+              />
+            }
+          />
+          <Route
+            path="/occasions"
+            element={<OccasionsPage onOpenInquiry={openInquiry} />}
+          />
+          <Route
+            path="/locations"
+            element={
+              <LocationsPage
+                onApplyConfigToBuilder={handleApplyConfigToBuilder}
+                onOpenInquiry={openInquiry}
+              />
+            }
+          />
+          <Route
+            path="/lookbook"
+            element={<LookbookPage onOpenInquiry={openInquiry} />}
+          />
+          <Route
+            path="/book"
+            element={<BookPage initialConfig={activeConfig} />}
+          />
+          <Route
+            path="/saved"
+            element={
+              <SavedPage
+                savedThemeIds={savedThemeIds}
+                onRemoveSavedTheme={removeSavedTheme}
+                onClearAll={clearAllSaved}
+                onToggleSaveTheme={toggleSaveTheme}
+                onOpenInquiry={openInquiry}
+              />
+            }
+          />
+          {/* 404 fallback → redirect to home */}
+          <Route
+            path="*"
+            element={
+              <div className="min-h-screen flex flex-col items-center justify-center text-center pt-32 pb-20 px-4">
+                <h1 className="font-serif-display text-6xl font-bold text-[#6B1724] mb-3">404</h1>
+                <p className="font-cursive text-3xl text-[#C59A5D] mb-6">Page Not Found</p>
+                <p className="text-sm text-[#52453E] font-light mb-8">The page you're looking for doesn't exist. Let's get you back on track.</p>
+                <button onClick={() => navigate('/')} className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full aurawed-button-primary text-xs uppercase tracking-widest font-bold cursor-pointer">
+                  <Heart className="w-4 h-4 text-[#DFB776]" />
+                  <span>Return Home</span>
+                </button>
+              </div>
+            }
+          />
+        </Routes>
       </main>
 
-      {/* Floating Action Button: Quick Love AI Concierge */}
+      {/* Floating AI Concierge Button */}
       <div className="fixed bottom-6 right-6 z-40">
         <button
           onClick={() => setIsLoveAIConciergeOpen(true)}
@@ -250,48 +227,47 @@ export default function App() {
 
       {/* Footer */}
       <Footer
-        onNavigateSection={scrollToSection}
+        onNavigateSection={(sectionId) => {
+          const routes: Record<string, string> = {
+            'estate-overview': '/spaces',
+            'experience-builder': '/builder',
+            'venue-themes': '/themes',
+            'private-spaces': '/spaces',
+            'love-ai-studio': '/ai-studio',
+            'targeted-areas': '/locations',
+            'occasions': '/occasions',
+            'lookbook': '/lookbook',
+            'why-private': '/',
+          };
+          const route = routes[sectionId];
+          if (route) navigate(route);
+        }}
         onOpenInfoModal={setInfoModalType}
-        onOpenInquiryModal={() => setIsInquiryModalOpen(true)}
-        onOpenExperienceBuilder={() => scrollToSection('experience-builder')}
+        onOpenInquiryModal={openInquiry}
+        onOpenExperienceBuilder={() => navigate('/builder')}
       />
 
-      {/* Modals & Drawers */}
-      {/* 1. Transformation Theme Detail Modal */}
-      <ThemeDetailModal
-        theme={activeTheme}
-        isOpen={!!activeTheme}
-        onClose={() => setActiveTheme(null)}
-        onCustomizeTheme={handleSelectThemeForCustomization}
-        onToggleSaveTheme={toggleSaveTheme}
-        isSaved={activeTheme ? savedThemeIds.includes(activeTheme.id) : false}
-      />
-
-      {/* 2. VIP Bespoke Consultation & Booking Reservation Modal */}
+      {/* Global Modals */}
       <BespokeInquiryModal
         isOpen={isInquiryModalOpen}
         onClose={() => setIsInquiryModalOpen(false)}
         initialConfig={activeConfig}
       />
 
-      {/* 3. Saved Moodboard / Setups Drawer */}
-      <SavedMomentsDrawer
-        isOpen={isSavedDrawerOpen}
-        onClose={() => setIsSavedDrawerOpen(false)}
-        savedThemes={savedThemes}
-        onRemoveSavedTheme={removeSavedTheme}
-        onClearAll={clearAllSaved}
-        onSelectTheme={setActiveTheme}
-      />
-
-      {/* 4. Love AI Floating Quick Concierge Modal */}
       <LoveAIConciergeModal
         isOpen={isLoveAIConciergeOpen}
         onClose={() => setIsLoveAIConciergeOpen(false)}
-        onNavigateSection={scrollToSection}
+        onNavigateSection={(sectionId) => {
+          const routes: Record<string, string> = {
+            'experience-builder': '/builder',
+            'love-ai-studio': '/ai-studio',
+            'venue-themes': '/themes',
+          };
+          const route = routes[sectionId];
+          if (route) navigate(route);
+        }}
       />
 
-      {/* 5. Informational Legal, Privacy & About Modals */}
       <InfoModals
         modalType={infoModalType}
         onClose={() => setInfoModalType(null)}

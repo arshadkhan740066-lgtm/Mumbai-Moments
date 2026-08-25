@@ -172,10 +172,10 @@ Please confirm availability and arrange our design consultation.`;
                 </div>
 
                 {/* Couple / Contact Details */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                   <div>
-                    <label className="block text-xs uppercase tracking-wider font-bold text-[#8C6D46] mb-1.5">
-                      Your Name *
+                    <label className="aurawed-form-label">
+                      Your Full Name <span className="text-[#9B1B30]">*</span>
                     </label>
                     <div className="relative">
                       <User className="w-4 h-4 text-[#8C6D46] absolute left-3.5 top-1/2 -translate-y-1/2" />
@@ -185,14 +185,14 @@ Please confirm availability and arrange our design consultation.`;
                         value={clientName}
                         onChange={(e) => setClientName(e.target.value)}
                         placeholder="e.g. Aryan Sharma"
-                        className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-[#E5D9C8] text-xs text-[#1E1B18] focus:border-[#6B1724] focus:outline-none bg-[#FAF7F2]"
+                        className="w-full pl-10 pr-4 py-3 rounded-xl border-2 border-[#D5C3A8] bg-white text-sm text-[#181310] font-medium placeholder-[#8E8075] focus:border-[#6B1724] focus:ring-4 focus:ring-[#6B1724]/10 focus:outline-none transition-all shadow-xs"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-xs uppercase tracking-wider font-bold text-[#8C6D46] mb-1.5">
-                      Partner's Name (Optional)
+                    <label className="aurawed-form-label">
+                      Partner's Name <span className="text-[10px] text-[#8C6D46] font-normal normal-case">(Optional)</span>
                     </label>
                     <div className="relative">
                       <Heart className="w-4 h-4 text-[#8C6D46] absolute left-3.5 top-1/2 -translate-y-1/2" />
@@ -201,14 +201,14 @@ Please confirm availability and arrange our design consultation.`;
                         value={partnerName}
                         onChange={(e) => setPartnerName(e.target.value)}
                         placeholder="e.g. Simran"
-                        className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-[#E5D9C8] text-xs text-[#1E1B18] focus:border-[#6B1724] focus:outline-none bg-[#FAF7F2]"
+                        className="w-full pl-10 pr-4 py-3 rounded-xl border-2 border-[#D5C3A8] bg-white text-sm text-[#181310] font-medium placeholder-[#8E8075] focus:border-[#6B1724] focus:ring-4 focus:ring-[#6B1724]/10 focus:outline-none transition-all shadow-xs"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-xs uppercase tracking-wider font-bold text-[#8C6D46] mb-1.5">
-                      WhatsApp / Phone Number *
+                    <label className="aurawed-form-label">
+                      WhatsApp / Phone Number <span className="text-[#9B1B30]">*</span>
                     </label>
                     <div className="relative">
                       <Phone className="w-4 h-4 text-[#8C6D46] absolute left-3.5 top-1/2 -translate-y-1/2" />
@@ -218,14 +218,14 @@ Please confirm availability and arrange our design consultation.`;
                         value={clientPhone}
                         onChange={(e) => setClientPhone(e.target.value)}
                         placeholder="+91 98200 XXXXX"
-                        className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-[#E5D9C8] text-xs text-[#1E1B18] focus:border-[#6B1724] focus:outline-none bg-[#FAF7F2]"
+                        className="w-full pl-10 pr-4 py-3 rounded-xl border-2 border-[#D5C3A8] bg-white text-sm text-[#181310] font-medium placeholder-[#8E8075] focus:border-[#6B1724] focus:ring-4 focus:ring-[#6B1724]/10 focus:outline-none transition-all shadow-xs"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-xs uppercase tracking-wider font-bold text-[#8C6D46] mb-1.5">
-                      Email Address *
+                    <label className="aurawed-form-label">
+                      Email Address <span className="text-[#9B1B30]">*</span>
                     </label>
                     <div className="relative">
                       <Mail className="w-4 h-4 text-[#8C6D46] absolute left-3.5 top-1/2 -translate-y-1/2" />
@@ -235,40 +235,40 @@ Please confirm availability and arrange our design consultation.`;
                         value={clientEmail}
                         onChange={(e) => setClientEmail(e.target.value)}
                         placeholder="aryan@gmail.com"
-                        className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-[#E5D9C8] text-xs text-[#1E1B18] focus:border-[#6B1724] focus:outline-none bg-[#FAF7F2]"
+                        className="w-full pl-10 pr-4 py-3 rounded-xl border-2 border-[#D5C3A8] bg-white text-sm text-[#181310] font-medium placeholder-[#8E8075] focus:border-[#6B1724] focus:ring-4 focus:ring-[#6B1724]/10 focus:outline-none transition-all shadow-xs"
                       />
                     </div>
                   </div>
                 </div>
 
                 {/* Date & Time Slot */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 pt-2">
                   <div>
-                    <label className="block text-xs uppercase tracking-wider font-bold text-[#8C6D46] mb-1.5">
-                      Preferred Date *
+                    <label className="aurawed-form-label">
+                      Preferred Date <span className="text-[#9B1B30]">*</span>
                     </label>
                     <div className="relative">
-                      <Calendar className="w-4 h-4 text-[#8C6D46] absolute left-3.5 top-1/2 -translate-y-1/2" />
+                      <Calendar className="w-4 h-4 text-[#8C6D46] absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
                       <input
                         type="date"
                         required
                         value={preferredDate}
                         onChange={(e) => setPreferredDate(e.target.value)}
-                        className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-[#E5D9C8] text-xs text-[#1E1B18] focus:border-[#6B1724] focus:outline-none bg-[#FAF7F2]"
+                        className="w-full pl-10 pr-4 py-3 rounded-xl border-2 border-[#D5C3A8] bg-white text-sm text-[#181310] font-medium focus:border-[#6B1724] focus:ring-4 focus:ring-[#6B1724]/10 focus:outline-none transition-all shadow-xs"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-xs uppercase tracking-wider font-bold text-[#8C6D46] mb-1.5">
+                    <label className="aurawed-form-label">
                       Evening Slot
                     </label>
                     <div className="relative">
-                      <Clock className="w-4 h-4 text-[#8C6D46] absolute left-3.5 top-1/2 -translate-y-1/2" />
+                      <Clock className="w-4 h-4 text-[#8C6D46] absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
                       <select
                         value={preferredSlot}
                         onChange={(e) => setPreferredSlot(e.target.value)}
-                        className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-[#E5D9C8] text-xs text-[#1E1B18] focus:border-[#6B1724] focus:outline-none bg-[#FAF7F2]"
+                        className="w-full pl-10 pr-4 py-3 rounded-xl border-2 border-[#D5C3A8] bg-white text-sm text-[#181310] font-medium focus:border-[#6B1724] focus:ring-4 focus:ring-[#6B1724]/10 focus:outline-none transition-all shadow-xs cursor-pointer"
                       >
                         <option>5:30 PM – Golden Hour Sunset</option>
                         <option>7:30 PM – Starlight Candlelight</option>
@@ -279,15 +279,15 @@ Please confirm availability and arrange our design consultation.`;
                 </div>
 
                 {/* Setup Preferences Overview */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 border-t border-[#EBE2D5]">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 pt-2 border-t border-[#EBE2D5]">
                   <div>
-                    <label className="block text-xs uppercase tracking-wider font-bold text-[#8C6D46] mb-1.5">
+                    <label className="aurawed-form-label">
                       Occasion
                     </label>
                     <select
                       value={occasion}
                       onChange={(e) => setOccasion(e.target.value as Occasion)}
-                      className="w-full px-4 py-2.5 rounded-xl border border-[#E5D9C8] text-xs text-[#1E1B18] focus:border-[#6B1724] focus:outline-none bg-[#FAF7F2]"
+                      className="w-full px-4 py-3 rounded-xl border-2 border-[#D5C3A8] bg-white text-sm text-[#181310] font-medium focus:border-[#6B1724] focus:ring-4 focus:ring-[#6B1724]/10 focus:outline-none transition-all shadow-xs cursor-pointer"
                     >
                       <option>Proposal</option>
                       <option>Anniversary</option>
@@ -299,13 +299,13 @@ Please confirm availability and arrange our design consultation.`;
                   </div>
 
                   <div>
-                    <label className="block text-xs uppercase tracking-wider font-bold text-[#8C6D46] mb-1.5">
+                    <label className="aurawed-form-label">
                       Private Venue Zone
                     </label>
                     <select
                       value={spaceArea}
                       onChange={(e) => setSpaceArea(e.target.value as VenueSpaceArea)}
-                      className="w-full px-4 py-2.5 rounded-xl border border-[#E5D9C8] text-xs text-[#1E1B18] focus:border-[#6B1724] focus:outline-none bg-[#FAF7F2]"
+                      className="w-full px-4 py-3 rounded-xl border-2 border-[#D5C3A8] bg-white text-sm text-[#181310] font-medium focus:border-[#6B1724] focus:ring-4 focus:ring-[#6B1724]/10 focus:outline-none transition-all shadow-xs cursor-pointer"
                     >
                       {VENUE_SPACES.map((s) => (
                         <option key={s.id} value={s.name}>
@@ -321,15 +321,15 @@ Please confirm availability and arrange our design consultation.`;
 
                 {/* Special Vision & Notes */}
                 <div>
-                  <label className="block text-xs uppercase tracking-wider font-bold text-[#8C6D46] mb-1.5">
-                    Your Vision / Song Requests / Pinterest Links
+                  <label className="aurawed-form-label">
+                    Your Vision / Song Requests / Special Touches
                   </label>
                   <textarea
                     rows={3}
                     value={customVisionText}
                     onChange={(e) => setCustomVisionText(e.target.value)}
-                    placeholder="Tell us any specific ideas, favorite love song for the proposal cue, dietary preferences (Jain, Vegan, Seafood), or color preferences..."
-                    className="w-full p-3.5 rounded-xl border border-[#E5D9C8] text-xs text-[#1E1B18] focus:border-[#6B1724] focus:outline-none bg-[#FAF7F2]"
+                    placeholder="Tell us any specific ideas, favorite love songs for the reveal cue, dietary preferences (Jain, Vegan, Seafood), or floral preferences..."
+                    className="w-full p-3.5 rounded-xl border-2 border-[#D5C3A8] bg-white text-sm text-[#181310] font-medium placeholder-[#8E8075] focus:border-[#6B1724] focus:ring-4 focus:ring-[#6B1724]/10 focus:outline-none transition-all shadow-xs"
                   />
                 </div>
 
@@ -338,7 +338,7 @@ Please confirm availability and arrange our design consultation.`;
                   <button
                     type="button"
                     onClick={handleSendWhatsApp}
-                    className="w-full sm:w-auto px-6 py-3 rounded-full bg-[#25D366] text-white text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-[#1EBE5D] transition-colors cursor-pointer"
+                    className="w-full sm:w-auto px-6 py-3.5 rounded-full bg-[#25D366] text-white text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-[#1EBE5D] transition-colors cursor-pointer shadow-md"
                   >
                     <MessageSquare className="w-4 h-4" />
                     <span>Inquire via WhatsApp</span>
@@ -346,7 +346,7 @@ Please confirm availability and arrange our design consultation.`;
 
                   <button
                     type="submit"
-                    className="w-full sm:w-auto px-8 py-3 rounded-full aurawed-button-primary text-xs uppercase tracking-widest font-bold flex items-center justify-center gap-2 cursor-pointer shadow-md"
+                    className="w-full sm:w-auto px-8 py-3.5 rounded-full aurawed-button-primary text-xs uppercase tracking-widest font-bold flex items-center justify-center gap-2 cursor-pointer shadow-md"
                   >
                     <Send className="w-4 h-4" />
                     <span>Submit Reservation Request</span>
