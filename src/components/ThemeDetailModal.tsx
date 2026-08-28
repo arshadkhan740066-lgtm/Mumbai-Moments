@@ -73,19 +73,19 @@ export const ThemeDetailModal = ({
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           transition={{ duration: 0.3 }}
-          className="relative w-full max-w-4xl bg-white rounded-3xl border border-[#E5D9C8] overflow-hidden shadow-2xl my-8 flex flex-col max-h-[90vh]"
+          className="relative w-full max-w-4xl bg-white rounded-3xl border border-[#E8D9DC] overflow-hidden shadow-2xl my-8 flex flex-col max-h-[90vh]"
         >
           {/* Header Bar */}
-          <div className="p-4 sm:p-6 border-b border-[#EBE2D5] flex items-center justify-between bg-[#FAF7F2]">
+          <div className="p-4 sm:p-6 border-b border-[#E8D9DC] flex items-center justify-between bg-[#FFFDFB]">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-[#FAF5EE] border border-[#C59A5D] flex items-center justify-center">
-                <Sparkles className="w-4 h-4 text-[#C59A5D]" />
+              <div className="w-8 h-8 rounded-full bg-[#FFFDFB] border border-[#C9A15B] flex items-center justify-center">
+                <Sparkles className="w-4 h-4 text-[#C9A15B]" />
               </div>
               <div>
-                <span className="text-[10px] uppercase tracking-widest text-[#8C6D46] font-bold block">
+                <span className="text-[10px] uppercase tracking-widest text-[#C9A15B] font-bold block">
                   Bespoke Setup Concept
                 </span>
-                <span className="text-xs text-[#52453E] font-medium">
+                <span className="text-xs text-[#5C4E52] font-medium">
                   {theme.spaceArea} • 100% Private Venue
                 </span>
               </div>
@@ -94,30 +94,30 @@ export const ThemeDetailModal = ({
             <div className="flex items-center gap-2">
               <button
                 onClick={() => onToggleSaveTheme(theme.id)}
-                className="p-2 rounded-full bg-white border border-[#E5D9C8] hover:border-[#C59A5D] text-[#1E1B18] transition-colors cursor-pointer"
+                className="p-2 rounded-full bg-white border border-[#E8D9DC] hover:border-[#C9A15B] text-[#241E20] transition-colors cursor-pointer"
                 title="Save to Moodboard"
               >
                 <Heart
                   className={`w-4 h-4 ${
-                    isSaved ? 'text-[#6B1724] fill-[#6B1724]' : 'text-[#52453E]'
+                    isSaved ? 'text-[#8F3F50] fill-[#8F3F50]' : 'text-[#5C4E52]'
                   }`}
                 />
               </button>
               <button
                 onClick={handleShare}
-                className="p-2 rounded-full bg-white border border-[#E5D9C8] hover:border-[#C59A5D] text-[#1E1B18] transition-colors cursor-pointer relative"
+                className="p-2 rounded-full bg-white border border-[#E8D9DC] hover:border-[#C9A15B] text-[#241E20] transition-colors cursor-pointer relative"
                 title="Share Setup"
               >
-                <Share2 className="w-4 h-4 text-[#52453E]" />
+                <Share2 className="w-4 h-4 text-[#5C4E52]" />
                 {copiedLink && (
-                  <span className="absolute -bottom-8 right-0 bg-[#1E1B18] text-white text-[10px] px-2 py-1 rounded shadow-md whitespace-nowrap">
+                  <span className="absolute -bottom-8 right-0 bg-[#241E20] text-white text-[10px] px-2 py-1 rounded shadow-md whitespace-nowrap">
                     Link copied!
                   </span>
                 )}
               </button>
               <button
                 onClick={onClose}
-                className="p-2 rounded-full bg-white border border-[#E5D9C8] hover:bg-[#FAF5EE] text-[#1E1B18] transition-colors cursor-pointer"
+                className="p-2 rounded-full bg-white border border-[#E8D9DC] hover:bg-[#FFFDFB] text-[#241E20] transition-colors cursor-pointer"
                 aria-label="Close modal"
               >
                 <X className="w-5 h-5" />
@@ -128,7 +128,7 @@ export const ThemeDetailModal = ({
           {/* Modal Scrollable Content */}
           <div className="overflow-y-auto p-6 sm:p-8 space-y-8">
             {/* Gallery Section */}
-            <div className="relative rounded-2xl overflow-hidden aspect-[16/9] bg-[#F0E6D8]">
+            <div className="relative rounded-2xl overflow-hidden aspect-[16/9] bg-[#F8EDEF]">
               <img
                 src={images[activeImageIndex]}
                 alt={theme.title}
@@ -167,7 +167,7 @@ export const ThemeDetailModal = ({
                     key={i}
                     onClick={() => setActiveImageIndex(i)}
                     className={`w-2 h-2 rounded-full transition-all cursor-pointer ${
-                      activeImageIndex === i ? 'w-6 bg-[#DFB776]' : 'bg-white/60'
+                      activeImageIndex === i ? 'w-6 bg-[#C9A15B]' : 'bg-white/60'
                     }`}
                   />
                 ))}
@@ -175,47 +175,47 @@ export const ThemeDetailModal = ({
             </div>
 
             {/* Title & Pricing Overview */}
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-[#EBE2D5]">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-[#E8D9DC]">
               <div>
                 <div className="flex items-center gap-2 mb-1.5">
-                  <span className="px-3 py-1 rounded-full bg-[#FAF5EE] border border-[#DFCDB7] text-[10px] font-bold text-[#6B1724] uppercase tracking-widest">
+                  <span className="px-3 py-1 rounded-full bg-[#FFFDFB] border border-[#E8D9DC] text-[10px] font-bold text-[#8F3F50] uppercase tracking-widest">
                     {theme.themeStyle}
                   </span>
-                  <span className="px-2.5 py-1 rounded-full bg-white border border-[#E5D9C8] text-[10px] font-semibold text-[#8C6D46] uppercase tracking-wider flex items-center gap-1">
-                    <Lock className="w-3 h-3 text-[#C59A5D]" />
+                  <span className="px-2.5 py-1 rounded-full bg-white border border-[#E8D9DC] text-[10px] font-semibold text-[#C9A15B] uppercase tracking-wider flex items-center gap-1">
+                    <Lock className="w-3 h-3 text-[#C9A15B]" />
                     <span>Exclusive 2 Guests</span>
                   </span>
                 </div>
-                <h2 className="font-serif-display text-2xl sm:text-4xl font-bold text-[#1E1B18]">
+                <h2 className="font-serif-display text-2xl sm:text-4xl font-bold text-[#241E20]">
                   {theme.title}
                 </h2>
-                <p className="text-xs sm:text-sm text-[#8C6D46] font-medium mt-1">
+                <p className="text-xs sm:text-sm text-[#C9A15B] font-medium mt-1">
                   {theme.subtitle}
                 </p>
               </div>
 
-              <div className="sm:text-right bg-[#FAF7F2] p-4 rounded-2xl border border-[#E5D9C8] min-w-[200px]">
-                <span className="text-[10px] uppercase tracking-wider text-[#8C6D46] font-bold block">
+              <div className="sm:text-right bg-[#FFFDFB] p-4 rounded-2xl border border-[#E8D9DC] min-w-[200px]">
+                <span className="text-[10px] uppercase tracking-wider text-[#C9A15B] font-bold block">
                   All-Inclusive Package
                 </span>
-                <div className="font-serif-display text-2xl font-bold text-[#6B1724]">
+                <div className="font-serif-display text-2xl font-bold text-[#8F3F50]">
                   {theme.basePriceDisplay}
                 </div>
-                <span className="text-[11px] text-[#736359] flex items-center sm:justify-end gap-1 mt-0.5">
-                  <Clock className="w-3 h-3 text-[#C59A5D]" />
+                <span className="text-[11px] text-[#5C4E52] flex items-center sm:justify-end gap-1 mt-0.5">
+                  <Clock className="w-3 h-3 text-[#C9A15B]" />
                   <span>{theme.setupTimeHours} hrs setup required</span>
                 </span>
               </div>
             </div>
 
             {/* Atmosphere Highlight */}
-            <div className="p-4 rounded-2xl bg-[#FAF5EE] border border-[#DFCDB7] flex items-start gap-3.5">
-              <Sparkles className="w-5 h-5 text-[#C59A5D] flex-shrink-0 mt-0.5" />
+            <div className="p-4 rounded-2xl bg-[#FFFDFB] border border-[#E8D9DC] flex items-start gap-3.5">
+              <Sparkles className="w-5 h-5 text-[#C9A15B] flex-shrink-0 mt-0.5" />
               <div>
-                <span className="text-xs font-bold text-[#6B1724] uppercase tracking-wider block">
+                <span className="text-xs font-bold text-[#8F3F50] uppercase tracking-wider block">
                   Atmospheric Experience
                 </span>
-                <p className="text-xs text-[#52453E] font-light mt-0.5 leading-relaxed">
+                <p className="text-xs text-[#5C4E52] font-light mt-0.5 leading-relaxed">
                   {theme.atmosphereHighlight}
                 </p>
               </div>
@@ -223,17 +223,17 @@ export const ThemeDetailModal = ({
 
             {/* Inclusions Checklist */}
             <div className="space-y-3">
-              <h3 className="font-serif-display text-lg font-bold text-[#1E1B18]">
+              <h3 className="font-serif-display text-lg font-bold text-[#241E20]">
                 What’s Included in This Experience
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                 {theme.inclusions.map((inc, i) => (
                   <div
                     key={i}
-                    className="p-3 rounded-xl bg-[#FAF7F2] border border-[#E5D9C8] flex items-start gap-2.5"
+                    className="p-3 rounded-xl bg-[#FFFDFB] border border-[#E8D9DC] flex items-start gap-2.5"
                   >
-                    <Check className="w-4 h-4 text-[#6B1724] flex-shrink-0 mt-0.5" />
-                    <span className="text-xs text-[#52453E] font-medium leading-tight">
+                    <Check className="w-4 h-4 text-[#8F3F50] flex-shrink-0 mt-0.5" />
+                    <span className="text-xs text-[#5C4E52] font-medium leading-tight">
                       {inc}
                     </span>
                   </div>
@@ -244,13 +244,13 @@ export const ThemeDetailModal = ({
             {/* Customization Options */}
             {theme.customizationOptions && theme.customizationOptions.length > 0 && (
               <div className="space-y-3">
-                <h3 className="font-serif-display text-lg font-bold text-[#1E1B18]">
+                <h3 className="font-serif-display text-lg font-bold text-[#241E20]">
                   Customization Available for You
                 </h3>
-                <ul className="space-y-2 text-xs text-[#52453E]">
+                <ul className="space-y-2 text-xs text-[#5C4E52]">
                   {theme.customizationOptions.map((opt, i) => (
                     <li key={i} className="flex items-start gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#C59A5D] mt-1.5 flex-shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#C9A15B] mt-1.5 flex-shrink-0" />
                       <span>{opt}</span>
                     </li>
                   ))}
@@ -259,14 +259,14 @@ export const ThemeDetailModal = ({
             )}
 
             {/* Designer Note */}
-            <div className="p-4 rounded-2xl bg-white border border-[#E5D9C8] text-xs text-[#52453E] italic">
-              <strong className="text-[#1E1B18] font-bold not-italic">Designer’s Recommendation: </strong>
+            <div className="p-4 rounded-2xl bg-white border border-[#E8D9DC] text-xs text-[#5C4E52] italic">
+              <strong className="text-[#241E20] font-bold not-italic">Designer’s Recommendation: </strong>
               "{theme.designerNote}"
             </div>
           </div>
 
           {/* Sticky Bottom Actions */}
-          <div className="p-4 sm:p-6 border-t border-[#EBE2D5] bg-[#FAF7F2] flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div className="p-4 sm:p-6 border-t border-[#E8D9DC] bg-[#FFFDFB] flex flex-col sm:flex-row items-center justify-between gap-3">
             <button
               onClick={handleWhatsAppBooking}
               className="w-full sm:w-auto px-6 py-3 rounded-full bg-[#25D366] text-white text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-[#1EBE5D] transition-colors cursor-pointer shadow-md"
@@ -283,7 +283,7 @@ export const ThemeDetailModal = ({
                 }}
                 className="flex-1 sm:flex-none px-8 py-3 rounded-full aurawed-button-primary text-xs uppercase tracking-widest font-bold flex items-center justify-center gap-2 cursor-pointer shadow-md"
               >
-                <Sparkles className="w-4 h-4 text-[#DFB776]" />
+                <Sparkles className="w-4 h-4 text-[#C9A15B]" />
                 <span>Customize in Studio</span>
               </button>
             </div>

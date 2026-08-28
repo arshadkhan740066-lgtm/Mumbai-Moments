@@ -53,18 +53,18 @@ const OCCASION_CARDS = [
 
 export const OccasionsSection = ({ onSelectOccasionForBuilder }: OccasionsSectionProps) => {
   return (
-    <section id="occasions" className="py-20 bg-[#FAF5EE] border-b border-[#E5D9C8] relative">
+    <section id="occasions" className="py-20 bg-[#FFFDFB] border-b border-[#E8D9DC] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FAF0E1] border border-[#DFCDB7] text-[#6B1724] text-xs font-semibold uppercase tracking-widest mb-3">
-            <Sparkles className="w-3.5 h-3.5 text-[#C59A5D]" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#F8EDEF] border border-[#E8D9DC] text-[#8F3F50] text-xs font-semibold uppercase tracking-widest mb-3">
+            <Sparkles className="w-3.5 h-3.5 text-[#C9A15B]" />
             <span>Tailored To Your Occasion</span>
           </div>
-          <h2 className="font-serif-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#1E1B18]">
+          <h2 className="font-serif-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#241E20]">
             Crafted for Life’s Greatest Moments
           </h2>
-          <p className="text-sm sm:text-base text-[#52453E] font-light mt-3">
+          <p className="text-sm sm:text-base text-[#5C4E52] font-light mt-3">
             Every celebration requires a unique ambiance. Tell us what you are celebrating, and we transform our private venue into your customized sanctuary.
           </p>
         </div>
@@ -81,18 +81,18 @@ export const OccasionsSection = ({ onSelectOccasionForBuilder }: OccasionsSectio
               className="group aurawed-card rounded-3xl flex flex-col overflow-hidden shadow-[0_4px_20px_rgba(80,50,30,0.04)] hover:shadow-[0_15px_35px_rgba(80,50,30,0.08)] transition-all duration-300"
             >
               {/* Image with Dark Gradient */}
-              <div className="relative aspect-[16/9] overflow-hidden bg-[#FAF5EE]">
+              <div className="relative aspect-[16/9] overflow-hidden bg-[#FFFDFB]">
                 <img
                   src={item.bgImage}
                   alt={item.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
-                <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/95 text-[10px] uppercase tracking-wider text-[#6B1724] font-bold shadow-xs">
+                <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/95 text-[10px] uppercase tracking-wider text-[#8F3F50] font-bold shadow-xs">
                   {item.badge}
                 </div>
                 <div className="absolute bottom-3 left-4 text-white text-[11px] font-semibold flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-[#DFB776]" />
+                  <span className="w-2 h-2 rounded-full bg-[#C9A15B]" />
                   <span>Best in: {item.recommendedZone}</span>
                 </div>
               </div>
@@ -100,17 +100,17 @@ export const OccasionsSection = ({ onSelectOccasionForBuilder }: OccasionsSectio
               {/* Body */}
               <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="font-serif-display text-2xl font-bold text-[#1E1B18] group-hover:text-[#6B1724] transition-colors mb-2">
+                  <h3 className="font-serif-display text-2xl font-bold text-[#241E20] group-hover:text-[#8F3F50] transition-colors mb-2">
                     {item.name}
                   </h3>
-                  <p className="text-xs text-[#52453E] font-light leading-relaxed mb-6">
+                  <p className="text-xs text-[#5C4E52] font-light leading-relaxed mb-6">
                     {item.tagline}
                   </p>
                 </div>
 
                 <button
                   onClick={() => onSelectOccasionForBuilder(item.name)}
-                  className="w-full py-3 rounded-full aurawed-button-secondary text-[#6B1724] font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 cursor-pointer group/btn hover:border-[#6B1724]"
+                  className="w-full py-3 rounded-full aurawed-button-secondary text-[#8F3F50] font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 cursor-pointer group/btn hover:border-[#8F3F50]"
                 >
                   <span>Design a {item.name}</span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform" />

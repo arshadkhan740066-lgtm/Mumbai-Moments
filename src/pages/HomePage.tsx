@@ -6,8 +6,8 @@ import { EstateOverviewSection } from '../components/EstateOverviewSection';
 import { OccasionsSection } from '../components/OccasionsSection';
 import { LookbookSection } from '../components/LookbookSection';
 import { BespokeInquiryModal } from '../components/BespokeInquiryModal';
-import { Occasion, VenueTransformationTheme, BespokeExperienceConfig } from '../types';
-import { Sparkles, ArrowRight, Heart, Star, MapPin, ChevronRight } from 'lucide-react';
+import { Occasion, VenueTransformationTheme } from '../types';
+import { Sparkles, ArrowRight, Heart, MapPin, ChevronRight } from 'lucide-react';
 import { motion } from 'motion/react';
 import { VENUE_THEMES } from '../data/venueData';
 import { ThemeDetailModal } from '../components/ThemeDetailModal';
@@ -26,10 +26,7 @@ export const HomePage = ({ onOpenInquiry, savedThemeIds, onToggleSaveTheme }: Ho
     navigate('/builder');
   };
 
-  const scrollToSection = (sectionId: string) => {
-    const el = document.getElementById(sectionId);
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
+
 
   return (
     <div>
@@ -45,17 +42,17 @@ export const HomePage = ({ onOpenInquiry, savedThemeIds, onToggleSaveTheme }: Ho
       />
 
       {/* Featured Themes Preview */}
-      <section className="py-16 sm:py-24 bg-[#FAF7F2] border-b border-[#E5D9C8]">
+      <section className="py-16 sm:py-24 bg-[#FFFDFB] border-b border-[#E8D9DC]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#DFCDB7] text-[#6B1724] text-xs font-semibold uppercase tracking-widest mb-3">
-              <Sparkles className="w-3.5 h-3.5 text-[#C59A5D]" />
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#E8D9DC] text-[#8F3F50] text-xs font-semibold uppercase tracking-widest mb-3">
+              <Sparkles className="w-3.5 h-3.5 text-[#C9A15B]" />
               <span>Curated Themes</span>
             </div>
-            <h2 className="font-serif-display text-3xl sm:text-5xl font-bold text-[#1E1B18] tracking-tight">
+            <h2 className="font-serif-display text-3xl sm:text-5xl font-bold text-[#241E20] tracking-tight">
               Signature Transformations
             </h2>
-            <p className="text-sm sm:text-base text-[#52453E] font-light mt-3 leading-relaxed">
+            <p className="text-sm sm:text-base text-[#5C4E52] font-light mt-3 leading-relaxed">
               Each setup is custom-crafted by our artisan team to turn our private estate into your dream scene.
             </p>
           </div>
@@ -78,16 +75,16 @@ export const HomePage = ({ onOpenInquiry, savedThemeIds, onToggleSaveTheme }: Ho
                     onClick={(e) => { e.stopPropagation(); onToggleSaveTheme(theme.id); }}
                     className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 flex items-center justify-center shadow-md hover:scale-110 transition-transform cursor-pointer"
                   >
-                    <Heart className={`w-4 h-4 ${savedThemeIds.includes(theme.id) ? 'fill-[#6B1724] text-[#6B1724]' : 'text-[#8C6D46]'}`} />
+                    <Heart className={`w-4 h-4 ${savedThemeIds.includes(theme.id) ? 'fill-[#8F3F50] text-[#8F3F50]' : 'text-[#C9A15B]'}`} />
                   </button>
                   <div className="absolute bottom-3 left-3 right-3">
                     <h3 className="font-serif-display text-base font-bold text-white leading-tight">{theme.title}</h3>
-                    <p className="text-[10px] text-[#DFB776] uppercase tracking-wider mt-0.5">{theme.spaceArea}</p>
+                    <p className="text-[10px] text-[#C9A15B] uppercase tracking-wider mt-0.5">{theme.spaceArea}</p>
                   </div>
                 </div>
                 <div className="p-4 flex items-center justify-between">
-                  <span className="text-xs text-[#52453E] font-light line-clamp-1 flex-1">{theme.tagline}</span>
-                  <ChevronRight className="w-4 h-4 text-[#C59A5D] flex-shrink-0 ml-2" />
+                  <span className="text-xs text-[#5C4E52] font-light line-clamp-1 flex-1">{theme.subtitle}</span>
+                  <ChevronRight className="w-4 h-4 text-[#C9A15B] flex-shrink-0 ml-2" />
                 </div>
               </motion.div>
             ))}
@@ -103,10 +100,10 @@ export const HomePage = ({ onOpenInquiry, savedThemeIds, onToggleSaveTheme }: Ho
       </section>
 
       {/* Locations teaser */}
-      <section className="py-16 sm:py-20 bg-gradient-to-b from-[#1E160E] to-[#181310] text-white border-b border-[#362A22]">
+      <section className="py-16 sm:py-20 bg-gradient-to-b from-[#241E20] to-[#241E20] text-white border-b border-[#362A22]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-10">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-[#DFB776] text-xs font-semibold uppercase tracking-widest mb-4">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-[#C9A15B] text-xs font-semibold uppercase tracking-widest mb-4">
               <MapPin className="w-3.5 h-3.5" />
               <span>Serving All Central Mumbai</span>
             </div>
@@ -121,7 +118,7 @@ export const HomePage = ({ onOpenInquiry, savedThemeIds, onToggleSaveTheme }: Ho
             ))}
           </div>
           <div className="text-center">
-            <Link to="/locations" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border-2 border-[#C59A5D] text-[#DFB776] text-xs uppercase tracking-widest font-bold hover:bg-[#C59A5D]/10 transition-colors">
+            <Link to="/locations" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border-2 border-[#C9A15B] text-[#C9A15B] text-xs uppercase tracking-widest font-bold hover:bg-[#C9A15B]/10 transition-colors">
               <span>View All Locations</span>
               <ArrowRight className="w-4 h-4" />
             </Link>

@@ -73,29 +73,28 @@ export const LookbookPage = ({ onOpenInquiry }: LookbookPageProps) => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-[#FAF7F2]">
-      {/* Hero */}
-      <section className="relative pt-28 pb-16 sm:pt-36 sm:pb-20 bg-[#FAF5EE] border-b border-[#E5D9C8]">
+    <div className="min-h-screen bg-[#FFFDFB]">
+      <section className="relative pt-28 pb-16 sm:pt-36 sm:pb-20 bg-gradient-to-br from-[#F8EDEF] to-[#FFFDFB] border-b border-[#E8D9DC]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#DFCDB7] text-[#6B1724] text-xs font-semibold uppercase tracking-widest mb-5 shadow-sm">
-            <Camera className="w-3.5 h-3.5 text-[#C59A5D]" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#E8D9DC] text-[#8F3F50] text-xs font-semibold uppercase tracking-widest mb-5 shadow-sm">
+            <Camera className="w-3.5 h-3.5 text-[#8F3F50]" />
             <span>Real Transformations & Stories</span>
           </div>
-          <h1 className="font-serif-display text-4xl sm:text-6xl font-bold text-[#181310] tracking-tight mb-4">
+          <h1 className="font-serif-display text-4xl sm:text-6xl font-bold text-[#241E20] tracking-tight mb-4">
             The Lookbook
           </h1>
-          <p className="text-sm sm:text-lg text-[#52453E] font-light max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-lg text-[#5C4E52] font-light max-w-2xl mx-auto leading-relaxed">
             Real couples. Real moments. Real transformations. Browse our gallery and read their stories.
           </p>
         </div>
       </section>
 
       {/* Photo Gallery Grid */}
-      <section className="py-16 sm:py-24 border-b border-[#E5D9C8]">
+      <section className="py-16 sm:py-24 border-b border-[#E8D9DC]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="font-serif-display text-3xl font-bold text-[#181310] mb-2">Photo Gallery</h2>
-            <p className="text-sm text-[#52453E] font-light">Real estate transformations captured by our documentary photography team.</p>
+            <h2 className="font-serif-display text-3xl font-bold text-[#241E20] mb-2">Photo Gallery</h2>
+            <p className="text-sm text-[#5C4E52] font-light">Real estate transformations captured by our documentary photography team.</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
             {galleryImages.map((img, i) => (
@@ -116,14 +115,14 @@ export const LookbookPage = ({ onOpenInquiry }: LookbookPageProps) => {
       </section>
 
       {/* Client Testimonials */}
-      <section className="py-16 sm:py-24 bg-white border-b border-[#E5D9C8]">
+      <section className="py-16 sm:py-24 bg-white border-b border-[#E8D9DC]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FAF5EE] border border-[#DFCDB7] text-[#6B1724] text-xs font-semibold uppercase tracking-widest mb-4">
-              <Heart className="w-3.5 h-3.5 fill-[#6B1724] text-[#6B1724]" />
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FFFDFB] border border-[#E8D9DC] text-[#8F3F50] text-xs font-semibold uppercase tracking-widest mb-4">
+              <Heart className="w-3.5 h-3.5 fill-[#8F3F50] text-[#8F3F50]" />
               <span>Real Love Stories</span>
             </div>
-            <h2 className="font-serif-display text-3xl sm:text-4xl font-bold text-[#181310]">What Our Couples Say</h2>
+            <h2 className="font-serif-display text-3xl sm:text-4xl font-bold text-[#241E20]">What Our Couples Say</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {testimonials.map((t, i) => (
@@ -133,20 +132,20 @@ export const LookbookPage = ({ onOpenInquiry }: LookbookPageProps) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.07 }}
-                className="bg-[#FAF7F2] border border-[#EBE2D5] rounded-3xl p-6 space-y-4"
+                className="bg-[#FFFDFB] border border-[#E8D9DC] rounded-3xl p-6 space-y-4"
               >
                 <div className="flex items-center gap-1">
                   {[...Array(t.rating)].map((_, si) => (
-                    <Star key={si} className="w-3.5 h-3.5 fill-[#C59A5D] text-[#C59A5D]" />
+                    <Star key={si} className="w-3.5 h-3.5 fill-[#C9A15B] text-[#C9A15B]" />
                   ))}
                 </div>
-                <p className="text-sm text-[#382E28] font-light leading-relaxed italic">"{t.text}"</p>
-                <div className="pt-2 flex items-center gap-3 border-t border-[#EBE2D5]">
-                  <img src={t.image} alt={t.name} className="w-10 h-10 rounded-full object-cover border-2 border-[#C59A5D]" />
+                <p className="text-sm text-[#241E20] font-light leading-relaxed italic">"{t.text}"</p>
+                <div className="pt-2 flex items-center gap-3 border-t border-[#E8D9DC]">
+                  <img src={t.image} alt={t.name} className="w-10 h-10 rounded-full object-cover border-2 border-[#C9A15B]" />
                   <div>
-                    <p className="text-sm font-bold text-[#181310]">{t.name}</p>
-                    <p className="text-[10px] text-[#8C6D46] font-medium">{t.occasion}</p>
-                    <p className="text-[10px] text-[#8C6D46]">{t.location}</p>
+                    <p className="text-sm font-bold text-[#241E20]">{t.name}</p>
+                    <p className="text-[10px] text-[#C9A15B] font-medium">{t.occasion}</p>
+                    <p className="text-[10px] text-[#C9A15B]">{t.location}</p>
                   </div>
                 </div>
               </motion.div>
@@ -158,14 +157,14 @@ export const LookbookPage = ({ onOpenInquiry }: LookbookPageProps) => {
       <LookbookSection onOpenInquiry={onOpenInquiry} />
 
       {/* CTA */}
-      <section className="py-14 bg-gradient-to-br from-[#6B1724] to-[#3A0B12] text-white">
+      <section className="py-14 bg-gradient-to-br from-[#8F3F50] to-[#8F3F50] text-white">
         <div className="max-w-3xl mx-auto px-4 text-center space-y-5">
           <h2 className="font-serif-display text-3xl sm:text-4xl font-bold">Ready to Create Your Story?</h2>
           <p className="text-white/75 text-sm font-light">Join hundreds of couples who chose Mumbai Moments for the most important evenings of their lives.</p>
           <div className="flex flex-wrap justify-center gap-3">
             <button
               onClick={onOpenInquiry}
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#DFB776] text-[#18140E] text-xs font-bold uppercase tracking-widest hover:brightness-105 transition-all cursor-pointer shadow-xl"
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#C9A15B] text-[#241E20] text-xs font-bold uppercase tracking-widest hover:brightness-105 transition-all cursor-pointer shadow-xl"
             >
               <Sparkles className="w-4 h-4" />
               <span>Book Your Date</span>

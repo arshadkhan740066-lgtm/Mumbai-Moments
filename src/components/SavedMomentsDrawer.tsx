@@ -52,20 +52,20 @@ export const SavedMomentsDrawer = ({
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="w-screen max-w-md bg-white border-l border-[#E5D9C8] shadow-2xl flex flex-col"
+            className="w-screen max-w-md bg-white border-l border-[#E8D9DC] shadow-2xl flex flex-col"
           >
             {/* Header */}
-            <div className="p-6 bg-[#FAF7F2] border-b border-[#E5D9C8] flex items-center justify-between">
+            <div className="p-6 bg-[#FFFDFB] border-b border-[#E8D9DC] flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <Heart className="w-5 h-5 text-[#6B1724] fill-[#6B1724]" />
-                <h3 className="font-serif-display text-xl font-bold text-[#1E1B18]">
+                <Heart className="w-5 h-5 text-[#8F3F50] fill-[#8F3F50]" />
+                <h3 className="font-serif-display text-xl font-bold text-[#241E20]">
                   Saved Moodboards ({savedThemes.length})
                 </h3>
               </div>
 
               <button
                 onClick={onClose}
-                className="p-2 rounded-full bg-white border border-[#DFCDB7] text-[#52453E] hover:text-[#1E1B18] transition-colors cursor-pointer"
+                className="p-2 rounded-full bg-white border border-[#E8D9DC] text-[#5C4E52] hover:text-[#241E20] transition-colors cursor-pointer"
                 aria-label="Close saved drawer"
               >
                 <X className="w-5 h-5" />
@@ -75,12 +75,12 @@ export const SavedMomentsDrawer = ({
             {/* List Body */}
             <div className="flex-1 overflow-y-auto p-6 space-y-4">
               {savedThemes.length === 0 ? (
-                <div className="text-center py-16 text-[#736359]">
-                  <Sparkles className="w-10 h-10 text-[#C59A5D] mx-auto mb-3 opacity-60" />
-                  <p className="font-serif-display text-lg text-[#1E1B18] font-bold mb-1">
+                <div className="text-center py-16 text-[#5C4E52]">
+                  <Sparkles className="w-10 h-10 text-[#C9A15B] mx-auto mb-3 opacity-60" />
+                  <p className="font-serif-display text-lg text-[#241E20] font-bold mb-1">
                     No Saved Setups Yet
                   </p>
-                  <p className="text-xs text-[#736359] max-w-xs mx-auto">
+                  <p className="text-xs text-[#5C4E52] max-w-xs mx-auto">
                     Click the heart icon on any custom setup or in the Experience Builder to save ideas for your partner or proposal.
                   </p>
                 </div>
@@ -88,7 +88,7 @@ export const SavedMomentsDrawer = ({
                 savedThemes.map((theme) => (
                   <div
                     key={theme.id}
-                    className="bg-[#FAF7F2] border border-[#E5D9C8] rounded-2xl p-3.5 flex gap-3 group shadow-xs"
+                    className="bg-[#FFFDFB] border border-[#E8D9DC] rounded-2xl p-3.5 flex gap-3 group shadow-xs"
                   >
                     <img
                       src={theme.coverImage}
@@ -98,20 +98,20 @@ export const SavedMomentsDrawer = ({
                     <div className="flex-1 min-w-0 flex flex-col justify-between">
                       <div>
                         <div className="flex items-start justify-between gap-1">
-                          <h4 className="font-serif-display text-sm font-bold text-[#1E1B18] truncate group-hover:text-[#6B1724] transition-colors">
+                          <h4 className="font-serif-display text-sm font-bold text-[#241E20] truncate group-hover:text-[#8F3F50] transition-colors">
                             {theme.title}
                           </h4>
                           <button
                             onClick={() => onRemoveSavedTheme(theme.id)}
-                            className="text-[#8C6D46] hover:text-red-600 p-1 cursor-pointer"
+                            className="text-[#C9A15B] hover:text-red-600 p-1 cursor-pointer"
                             title="Remove from saved"
                           >
                             <Trash2 className="w-3.5 h-3.5" />
                           </button>
                         </div>
-                        <div className="text-xs text-[#736359]">
+                        <div className="text-xs text-[#5C4E52]">
                           {theme.spaceArea} •{' '}
-                          <span className="text-[#6B1724] font-bold">
+                          <span className="text-[#8F3F50] font-bold">
                             {theme.basePriceDisplay}
                           </span>
                         </div>
@@ -122,7 +122,7 @@ export const SavedMomentsDrawer = ({
                           onClose();
                           onSelectTheme(theme);
                         }}
-                        className="inline-flex items-center gap-1 text-[11px] font-bold text-[#6B1724] hover:text-[#1E1B18] self-start mt-2 cursor-pointer"
+                        className="inline-flex items-center gap-1 text-[11px] font-bold text-[#8F3F50] hover:text-[#241E20] self-start mt-2 cursor-pointer"
                       >
                         <span>View Details</span>
                         <ArrowUpRight className="w-3 h-3" />
@@ -135,7 +135,7 @@ export const SavedMomentsDrawer = ({
 
             {/* Footer */}
             {savedThemes.length > 0 && (
-              <div className="p-6 bg-[#FAF7F2] border-t border-[#E5D9C8] space-y-3">
+              <div className="p-6 bg-[#FFFDFB] border-t border-[#E8D9DC] space-y-3">
                 <button
                   onClick={handleShareList}
                   className="w-full py-3 rounded-full aurawed-button-primary text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer shadow-md"
@@ -146,7 +146,7 @@ export const SavedMomentsDrawer = ({
 
                 <button
                   onClick={onClearAll}
-                  className="w-full py-2 text-xs text-[#8C6D46] hover:text-red-600 uppercase tracking-wider font-bold cursor-pointer"
+                  className="w-full py-2 text-xs text-[#C9A15B] hover:text-red-600 uppercase tracking-wider font-bold cursor-pointer"
                 >
                   Clear All Saved Setups
                 </button>

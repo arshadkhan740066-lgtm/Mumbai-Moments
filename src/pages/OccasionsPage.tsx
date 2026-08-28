@@ -17,7 +17,7 @@ const occasionShowcases = [
     image: 'https://images.unsplash.com/photo-1583876950993-9a3af5a4437a?q=80&w=1200&auto=format&fit=crop',
     highlights: ['Cold pyro fountain reveal', 'Live acoustic violin serenade', '4K documentation team', 'Personalized love letter service'],
     badge: 'Most Booked',
-    color: '#6B1724'
+    color: '#8F3F50'
   },
   {
     icon: '🥂',
@@ -27,7 +27,7 @@ const occasionShowcases = [
     image: 'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=1200&auto=format&fit=crop',
     highlights: ['Memory cinema under the stars', 'Personalized decor callbacks', 'Chef-curated anniversary tasting', 'Keepsake memory booklet'],
     badge: 'Most Romantic',
-    color: '#8C3A4D'
+    color: '#8F3F50'
   },
   {
     icon: '✨',
@@ -37,7 +37,7 @@ const occasionShowcases = [
     image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1200&auto=format&fit=crop',
     highlights: ['Surprise blindfold arrival', 'Curated cocktail welcome', 'Starlit private dining', 'Romantic takeaway hamper'],
     badge: 'Most Spontaneous',
-    color: '#C59A5D'
+    color: '#C9A15B'
   },
   {
     icon: '🎂',
@@ -57,7 +57,7 @@ const occasionShowcases = [
     image: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1200&auto=format&fit=crop',
     highlights: ['Up to 12 guests in full privacy', 'Custom monogram decor', 'Multi-course family feast', 'Photo booth & documentary coverage'],
     badge: 'Most Premium',
-    color: '#4A3728'
+    color: '#5C4E52'
   },
   {
     icon: '🕯️',
@@ -67,7 +67,7 @@ const occasionShowcases = [
     image: 'https://images.unsplash.com/photo-1591206369853-4a3ac7cdb58a?q=80&w=1200&auto=format&fit=crop',
     highlights: ['Full surprise logistics management', '300+ pillar candle setup', 'Blindfold arrival protocol', 'Emotional reveal photography'],
     badge: 'Most Dramatic',
-    color: '#7A551E'
+    color: '#C9A15B'
   }
 ];
 
@@ -75,18 +75,17 @@ export const OccasionsPage = ({ onOpenInquiry }: OccasionsPageProps) => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-[#FAF7F2]">
-      {/* Hero */}
-      <section className="relative pt-28 pb-16 sm:pt-36 sm:pb-20 bg-gradient-to-br from-[#FAF0E4] to-[#FAF7F2] border-b border-[#E5D9C8]">
+    <div className="min-h-screen bg-[#FFFDFB]">
+      <section className="relative pt-28 pb-16 sm:pt-36 sm:pb-20 bg-gradient-to-br from-[#F8EDEF] to-[#FFFDFB] border-b border-[#E8D9DC]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#DFCDB7] text-[#6B1724] text-xs font-semibold uppercase tracking-widest mb-5 shadow-sm">
-            <Heart className="w-3.5 h-3.5 fill-[#6B1724] text-[#6B1724]" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#E8D9DC] text-[#8F3F50] text-xs font-semibold uppercase tracking-widest mb-5 shadow-sm">
+            <Heart className="w-3.5 h-3.5 fill-[#8F3F50]" />
             <span>Milestone Occasions</span>
           </div>
-          <h1 className="font-serif-display text-4xl sm:text-6xl font-bold text-[#181310] tracking-tight mb-4">
+          <h1 className="font-serif-display text-4xl sm:text-6xl font-bold text-[#241E20] tracking-tight mb-4">
             Every Occasion, Perfectly Crafted
           </h1>
-          <p className="text-sm sm:text-lg text-[#52453E] font-light max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-lg text-[#5C4E52] font-light max-w-2xl mx-auto leading-relaxed">
             From world-class proposals to intimate birthday celebrations — each occasion receives its own unique design philosophy and expert execution.
           </p>
         </div>
@@ -121,16 +120,16 @@ export const OccasionsPage = ({ onOpenInquiry }: OccasionsPageProps) => {
               {/* Content */}
               <div className={`space-y-5 ${idx % 2 === 1 ? 'lg:order-1' : ''}`}>
                 <div>
-                  <h2 className="font-serif-display text-3xl sm:text-4xl font-bold text-[#181310] mb-1">{occ.title}</h2>
-                  <p className="font-cursive text-xl text-[#C59A5D]">{occ.tagline}</p>
+                  <h2 className="font-serif-display text-3xl sm:text-4xl font-bold text-[#241E20] mb-1">{occ.title}</h2>
+                  <p className="font-cursive text-xl text-[#C9A15B]">{occ.tagline}</p>
                 </div>
-                <p className="text-sm text-[#52453E] font-light leading-relaxed">{occ.description}</p>
+                <p className="text-sm text-[#5C4E52] font-light leading-relaxed">{occ.description}</p>
                 <div className="space-y-2">
-                  <p className="text-xs font-bold uppercase tracking-wider text-[#4A3728]">Signature Features</p>
+                  <p className="text-xs font-bold uppercase tracking-wider text-[#5C4E52]">Signature Features</p>
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     {occ.highlights.map((h, hi) => (
-                      <li key={hi} className="flex items-center gap-2 text-sm text-[#382E28]">
-                        <Star className="w-3.5 h-3.5 text-[#C59A5D] fill-[#C59A5D] flex-shrink-0" />
+                      <li key={hi} className="flex items-center gap-2 text-sm text-[#241E20]">
+                        <Star className="w-3.5 h-3.5 text-[#C9A15B] fill-[#C9A15B] flex-shrink-0" />
                         <span>{h}</span>
                       </li>
                     ))}
@@ -141,7 +140,7 @@ export const OccasionsPage = ({ onOpenInquiry }: OccasionsPageProps) => {
                     onClick={() => navigate('/builder')}
                     className="inline-flex items-center gap-2 px-6 py-3 rounded-full aurawed-button-primary text-xs uppercase tracking-wider font-bold cursor-pointer"
                   >
-                    <Sparkles className="w-3.5 h-3.5 text-[#DFB776]" />
+                    <Sparkles className="w-3.5 h-3.5 text-[#C9A15B]" />
                     <span>Design This Package</span>
                   </button>
                   <button

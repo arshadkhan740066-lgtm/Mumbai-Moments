@@ -3,8 +3,8 @@
 @layer base {
   html {
     font-family: 'Plus Jakarta Sans', 'Outfit', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background-color: #FAF7F2;
-    color: #1E1B18;
+    background-color: #FFFDFB;
+    color: #241E20;
     letter-spacing: -0.01em;
   }
 
@@ -12,7 +12,7 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
     letter-spacing: -0.02em;
-    color: #181310;
+    color: #241E20;
   }
 }
 
@@ -43,91 +43,91 @@
   height: 7px;
 }
 ::-webkit-scrollbar-track {
-  background: #F4EDE4;
+  background: #F8EDEF;
 }
 ::-webkit-scrollbar-thumb {
-  background: #CDB89D;
+  background: #C9A15B;
   border-radius: 9999px;
-  border: 1px solid #F4EDE4;
+  border: 1px solid #F8EDEF;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #B88947;
+  background: #C9A15B;
 }
 
 /* AuraWed Luxury Theme Classes */
 .aurawed-bg-pattern {
-  background-color: #FAF7F2;
-  background-image: radial-gradient(#E8DEC8 0.75px, transparent 0.75px), radial-gradient(#E8DEC8 0.75px, #FAF7F2 0.75px);
+  background-color: #FFFDFB;
+  background-image: radial-gradient(#E8D9DC 0.75px, transparent 0.75px), radial-gradient(#E8D9DC 0.75px, #FFFDFB 0.75px);
   background-size: 30px 30px;
   background-position: 0 0, 15px 15px;
 }
 
 .aurawed-card {
-  background: #FFFFFF;
-  border: 1px solid #EBE2D5;
+  background: #F8EDEF;
+  border: 1px solid #E8D9DC;
   box-shadow: 0 4px 24px -2px rgba(92, 64, 40, 0.05), 0 1px 3px rgba(0, 0, 0, 0.02);
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .aurawed-card:hover {
-  border-color: #C59A5D;
+  border-color: #C9A15B;
   box-shadow: 0 16px 36px -4px rgba(107, 23, 36, 0.09), 0 4px 12px rgba(197, 154, 93, 0.14);
   transform: translateY(-3px);
 }
 
 .aurawed-panel {
-  background: #FAF5EE;
-  border: 1px solid #E5D9C8;
+  background: #FFFDFB;
+  border: 1px solid #E8D9DC;
   box-shadow: 0 10px 30px -5px rgba(50, 30, 20, 0.04);
 }
 
 .aurawed-modal {
-  background: #FFFFFF;
-  border: 1px solid #DFCDB7;
+  background: #F8EDEF;
+  border: 1px solid #E8D9DC;
   box-shadow: 0 25px 60px -10px rgba(45, 25, 20, 0.28), 0 0 0 1px rgba(197, 154, 93, 0.18);
 }
 
 .aurawed-pill {
-  background: #FFFFFF;
-  border: 1.5px solid #E2D5C3;
-  color: #382E28;
+  background: #F8EDEF;
+  border: 1.5px solid #E8D9DC;
+  color: #241E20;
   transition: all 0.25s ease;
 }
 .aurawed-pill:hover {
-  background: #FAF5EE;
-  border-color: #C59A5D;
-  color: #1E1B18;
+  background: #FFFDFB;
+  border-color: #C9A15B;
+  color: #241E20;
 }
 
 .aurawed-pill-active {
-  background: linear-gradient(135deg, #6B1724 0%, #4A0E18 100%);
-  color: #FFFFFF !important;
-  border-color: #6B1724;
+  background: linear-gradient(135deg, #8F3F50 0%, #8F3F50 100%);
+  color: #F8EDEF !important;
+  border-color: #8F3F50;
   box-shadow: 0 4px 14px rgba(107, 23, 36, 0.28);
 }
 
 .aurawed-pill-gold-active {
-  background: linear-gradient(135deg, #C59A5D 0%, #DFB776 100%);
-  color: #1A150E;
-  border-color: #C59A5D;
+  background: linear-gradient(135deg, #C9A15B 0%, #C9A15B 100%);
+  color: #241E20;
+  border-color: #C9A15B;
   box-shadow: 0 4px 14px rgba(197, 154, 93, 0.3);
 }
 
 .aurawed-button-primary {
-  background: linear-gradient(135deg, #6B1724 0%, #4D0E19 100%);
-  color: #FFFFFF;
+  background: linear-gradient(135deg, #8F3F50 0%, #8F3F50 100%);
+  color: #F8EDEF;
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 4px 18px rgba(107, 23, 36, 0.24);
   transition: all 0.25s ease;
 }
 .aurawed-button-primary:hover {
-  background: linear-gradient(135deg, #7F1D2C 0%, #5E1220 100%);
+  background: linear-gradient(135deg, #8F3F50 0%, #8F3F50 100%);
   box-shadow: 0 6px 24px rgba(107, 23, 36, 0.36);
   transform: translateY(-1px);
 }
 
 .aurawed-button-gold {
-  background: linear-gradient(135deg, #C59A5D 0%, #DFB776 50%, #B88947 100%);
-  color: #18140E;
+  background: linear-gradient(135deg, #C9A15B 0%, #C9A15B 50%, #C9A15B 100%);
+  color: #241E20;
   font-weight: 700;
   box-shadow: 0 4px 16px rgba(197, 154, 93, 0.28);
   transition: all 0.25s ease;
@@ -139,24 +139,24 @@
 }
 
 .aurawed-button-secondary {
-  background: #FFFFFF;
-  border: 1.5px solid #D9C8B4;
-  color: #382E28;
+  background: #F8EDEF;
+  border: 1.5px solid #E8D9DC;
+  color: #241E20;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
   transition: all 0.25s ease;
 }
 .aurawed-button-secondary:hover {
-  background: #FAF5EE;
-  border-color: #C59A5D;
-  color: #1E1B18;
+  background: #FFFDFB;
+  border-color: #C9A15B;
+  color: #241E20;
 }
 
 /* Clear, High-Contrast Form Controls */
 .aurawed-input,
 .aurawed-form-input {
-  background: #FFFFFF;
-  border: 2px solid #D5C3A8;
-  color: #181310;
+  background: #F8EDEF;
+  border: 2px solid #E8D9DC;
+  color: #241E20;
   font-size: 0.875rem;
   line-height: 1.35rem;
   border-radius: 0.875rem;
@@ -166,17 +166,17 @@
 }
 .aurawed-input:hover,
 .aurawed-form-input:hover {
-  border-color: #B88947;
+  border-color: #C9A15B;
 }
 .aurawed-input:focus,
 .aurawed-form-input:focus {
-  border-color: #6B1724;
+  border-color: #8F3F50;
   box-shadow: 0 0 0 4px rgba(107, 23, 36, 0.12);
-  background-color: #FFFFFF;
+  background-color: #F8EDEF;
 }
 .aurawed-input::placeholder,
 .aurawed-form-input::placeholder {
-  color: #8E8075;
+  color: #5C4E52;
   font-weight: 400;
 }
 
@@ -186,14 +186,14 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #4A3728;
+  color: #5C4E52;
   margin-bottom: 0.45rem;
 }
 
 .aurawed-form-select {
-  background-color: #FFFFFF;
-  border: 2px solid #D5C3A8;
-  color: #181310;
+  background-color: #F8EDEF;
+  border: 2px solid #E8D9DC;
+  color: #241E20;
   font-size: 0.875rem;
   border-radius: 0.875rem;
   padding: 0.65rem 1rem;
@@ -202,17 +202,17 @@
   cursor: pointer;
 }
 .aurawed-form-select:hover {
-  border-color: #B88947;
+  border-color: #C9A15B;
 }
 .aurawed-form-select:focus {
-  border-color: #6B1724;
+  border-color: #8F3F50;
   box-shadow: 0 0 0 4px rgba(107, 23, 36, 0.12);
 }
 
 .aurawed-form-textarea {
-  background: #FFFFFF;
-  border: 2px solid #D5C3A8;
-  color: #181310;
+  background: #F8EDEF;
+  border: 2px solid #E8D9DC;
+  color: #241E20;
   font-size: 0.875rem;
   line-height: 1.5;
   border-radius: 0.875rem;
@@ -222,24 +222,24 @@
   resize: vertical;
 }
 .aurawed-form-textarea:hover {
-  border-color: #B88947;
+  border-color: #C9A15B;
 }
 .aurawed-form-textarea:focus {
-  border-color: #6B1724;
+  border-color: #8F3F50;
   box-shadow: 0 0 0 4px rgba(107, 23, 36, 0.12);
 }
 .aurawed-form-textarea::placeholder {
-  color: #8E8075;
+  color: #5C4E52;
 }
 
 .gold-text-gradient {
-  background: linear-gradient(135deg, #8E682E 0%, #C59A5D 50%, #7A5722 100%);
+  background: linear-gradient(135deg, #C9A15B 0%, #C9A15B 50%, #C9A15B 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .burgundy-text-gradient {
-  background: linear-gradient(135deg, #6B1724 0%, #9B283A 50%, #4D0E19 100%);
+  background: linear-gradient(135deg, #8F3F50 0%, #8F3F50 50%, #8F3F50 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -250,15 +250,15 @@
 }
 
 .gold-badge {
-  background: #FAF2E4;
-  border: 1.5px solid #D9BF91;
-  color: #7A551E;
+  background: #F8EDEF;
+  border: 1.5px solid #C9A15B;
+  color: #C9A15B;
   font-weight: 600;
 }
 
 .wine-badge {
-  background: #F9ECEE;
-  border: 1.5px solid #E5BAC1;
-  color: #6B1724;
+  background: #F8EDEF;
+  border: 1.5px solid #E8D9DC;
+  color: #8F3F50;
   font-weight: 600;
 }

@@ -59,15 +59,15 @@ export const BookPage = ({ initialConfig }: BookPageProps) => {
   const [selectedSlot, setSelectedSlot] = useState('7:30 PM – Starlight Candlelight');
 
   return (
-    <div className="min-h-screen bg-[#FAF7F2]">
+    <div className="min-h-screen bg-[#FFFDFB]">
       {/* Hero */}
-      <section className="relative pt-28 pb-16 sm:pt-36 sm:pb-20 bg-gradient-to-br from-[#2A1400] via-[#3A0B12] to-[#1E160E] overflow-hidden">
+      <section className="relative pt-28 pb-16 sm:pt-36 sm:pb-20 bg-gradient-to-br from-[#2A1400] via-[#8F3F50] to-[#241E20] overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop" alt="" className="w-full h-full object-cover" />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#3A0B12]/90 to-[#1E160E]/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#8F3F50]/90 to-[#241E20]/90" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-[#DFB776] text-xs font-semibold uppercase tracking-widest mb-5">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-[#C9A15B] text-xs font-semibold uppercase tracking-widest mb-5">
             <Lock className="w-3.5 h-3.5" />
             <span>Reserve Your Private Evening</span>
           </div>
@@ -81,10 +81,10 @@ export const BookPage = ({ initialConfig }: BookPageProps) => {
       </section>
 
       {/* How It Works */}
-      <section className="py-16 sm:py-20 bg-white border-b border-[#E5D9C8]">
+      <section className="py-16 sm:py-20 bg-white border-b border-[#E8D9DC]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="font-serif-display text-3xl font-bold text-[#181310]">How It Works</h2>
+            <h2 className="font-serif-display text-3xl font-bold text-[#241E20]">How It Works</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {bookingSteps.map((step, i) => (
@@ -96,11 +96,11 @@ export const BookPage = ({ initialConfig }: BookPageProps) => {
                 transition={{ duration: 0.4, delay: i * 0.08 }}
                 className="relative"
               >
-                <div className="text-5xl font-bold font-serif-display text-[#E8DCC8] mb-3">{step.num}</div>
-                <h3 className="font-serif-display text-lg font-bold text-[#181310] mb-2">{step.title}</h3>
-                <p className="text-xs text-[#52453E] font-light leading-relaxed">{step.desc}</p>
+                <div className="text-5xl font-bold font-serif-display text-[#E8D9DC] mb-3">{step.num}</div>
+                <h3 className="font-serif-display text-lg font-bold text-[#241E20] mb-2">{step.title}</h3>
+                <p className="text-xs text-[#5C4E52] font-light leading-relaxed">{step.desc}</p>
                 {i < bookingSteps.length - 1 && (
-                  <div className="hidden lg:block absolute top-6 -right-3 text-[#D5C3A8] text-2xl">→</div>
+                  <div className="hidden lg:block absolute top-6 -right-3 text-[#E8D9DC] text-2xl">→</div>
                 )}
               </motion.div>
             ))}
@@ -109,15 +109,15 @@ export const BookPage = ({ initialConfig }: BookPageProps) => {
       </section>
 
       {/* Evening Slot Selector */}
-      <section className="py-16 bg-[#FAF7F2] border-b border-[#E5D9C8]">
+      <section className="py-16 bg-[#FFFDFB] border-b border-[#E8D9DC]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#DFCDB7] text-[#6B1724] text-xs font-semibold uppercase tracking-widest mb-4 shadow-sm">
-              <Clock className="w-3.5 h-3.5 text-[#C59A5D]" />
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#E8D9DC] text-[#8F3F50] text-xs font-semibold uppercase tracking-widest mb-4 shadow-sm">
+              <Clock className="w-3.5 h-3.5 text-[#C9A15B]" />
               <span>Choose Your Evening Slot</span>
             </div>
-            <h2 className="font-serif-display text-3xl font-bold text-[#181310]">Select Your Preferred Time</h2>
-            <p className="text-sm text-[#52453E] font-light mt-2">Each slot has a different ambiance and mood. Choose the one that matches your vision.</p>
+            <h2 className="font-serif-display text-3xl font-bold text-[#241E20]">Select Your Preferred Time</h2>
+            <p className="text-sm text-[#5C4E52] font-light mt-2">Each slot has a different ambiance and mood. Choose the one that matches your vision.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {timeSlots.map((slot) => {
@@ -129,23 +129,23 @@ export const BookPage = ({ initialConfig }: BookPageProps) => {
                   onClick={() => setSelectedSlot(slotKey)}
                   className={`relative p-6 rounded-3xl text-left transition-all cursor-pointer border-2 ${
                     isSelected
-                      ? 'bg-[#FAF5EE] border-[#6B1724] shadow-lg'
-                      : 'bg-white border-[#E5D9C8] hover:border-[#C59A5D] shadow-sm'
+                      ? 'bg-[#FFFDFB] border-[#8F3F50] shadow-lg'
+                      : 'bg-white border-[#E8D9DC] hover:border-[#C9A15B] shadow-sm'
                   }`}
                 >
                   {slot.popular && (
-                    <span className="absolute top-4 right-4 px-2.5 py-1 rounded-full bg-[#6B1724] text-white text-[9px] font-bold uppercase tracking-wider">
+                    <span className="absolute top-4 right-4 px-2.5 py-1 rounded-full bg-[#8F3F50] text-white text-[9px] font-bold uppercase tracking-wider">
                       Most Popular
                     </span>
                   )}
                   <div className="text-3xl mb-3">{slot.icon}</div>
-                  <div className="text-[#C59A5D] text-xs font-bold uppercase tracking-widest mb-1">{slot.time}</div>
-                  <h3 className={`font-serif-display text-lg font-bold mb-2 ${isSelected ? 'text-[#6B1724]' : 'text-[#181310]'}`}>
+                  <div className="text-[#C9A15B] text-xs font-bold uppercase tracking-widest mb-1">{slot.time}</div>
+                  <h3 className={`font-serif-display text-lg font-bold mb-2 ${isSelected ? 'text-[#8F3F50]' : 'text-[#241E20]'}`}>
                     {slot.name}
                   </h3>
-                  <p className="text-xs text-[#52453E] font-light leading-relaxed">{slot.desc}</p>
+                  <p className="text-xs text-[#5C4E52] font-light leading-relaxed">{slot.desc}</p>
                   {isSelected && (
-                    <div className="mt-3 flex items-center gap-1.5 text-[#6B1724]">
+                    <div className="mt-3 flex items-center gap-1.5 text-[#8F3F50]">
                       <Check className="w-4 h-4" />
                       <span className="text-xs font-bold">Selected</span>
                     </div>
@@ -160,19 +160,19 @@ export const BookPage = ({ initialConfig }: BookPageProps) => {
       {/* Main CTA Buttons */}
       <section className="py-16 sm:py-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white border-2 border-[#E5D9C8] rounded-3xl p-8 sm:p-10 shadow-xl space-y-8">
+          <div className="bg-white border-2 border-[#E8D9DC] rounded-3xl p-8 sm:p-10 shadow-xl space-y-8">
             {/* Privacy Notice */}
-            <div className="flex items-start gap-3 p-4 rounded-2xl bg-[#FAF5EE] border border-[#DFCDB7]">
-              <Lock className="w-5 h-5 text-[#C59A5D] flex-shrink-0 mt-0.5" />
+            <div className="flex items-start gap-3 p-4 rounded-2xl bg-[#FFFDFB] border border-[#E8D9DC]">
+              <Lock className="w-5 h-5 text-[#C9A15B] flex-shrink-0 mt-0.5" />
               <div>
                 <p className="text-sm font-bold text-[#381F18]">Complete Exclusivity Guaranteed</p>
-                <p className="text-xs text-[#52453E] font-light mt-0.5">Only 1 couple or group is hosted per evening slot. Your privacy is absolute — no other guests, no shared spaces, no interruptions.</p>
+                <p className="text-xs text-[#5C4E52] font-light mt-0.5">Only 1 couple or group is hosted per evening slot. Your privacy is absolute — no other guests, no shared spaces, no interruptions.</p>
               </div>
             </div>
 
             {/* What's Included Summary */}
             <div className="space-y-3">
-              <h3 className="font-serif-display text-xl font-bold text-[#181310]">Every Booking Includes</h3>
+              <h3 className="font-serif-display text-xl font-bold text-[#241E20]">Every Booking Includes</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {[
                   '100% Exclusive Private Venue Access',
@@ -184,8 +184,8 @@ export const BookPage = ({ initialConfig }: BookPageProps) => {
                   'Private Dressing Suite & Valet Parking',
                   'Senior Event Director Consultation'
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-2.5 text-sm text-[#382E28]">
-                    <Check className="w-3.5 h-3.5 text-[#6B1724] flex-shrink-0" />
+                  <div key={i} className="flex items-center gap-2.5 text-sm text-[#241E20]">
+                    <Check className="w-3.5 h-3.5 text-[#8F3F50] flex-shrink-0" />
                     <span>{item}</span>
                   </div>
                 ))}
@@ -193,11 +193,11 @@ export const BookPage = ({ initialConfig }: BookPageProps) => {
             </div>
 
             {/* Selected Slot Display */}
-            <div className="flex items-center gap-3 p-4 rounded-2xl bg-[#FAF7F2] border border-[#E5D9C8]">
-              <Calendar className="w-5 h-5 text-[#C59A5D] flex-shrink-0" />
+            <div className="flex items-center gap-3 p-4 rounded-2xl bg-[#FFFDFB] border border-[#E8D9DC]">
+              <Calendar className="w-5 h-5 text-[#C9A15B] flex-shrink-0" />
               <div>
-                <p className="text-[10px] text-[#8C6D46] uppercase tracking-wider font-bold">Selected Evening Slot</p>
-                <p className="text-sm font-bold text-[#181310]">{selectedSlot}</p>
+                <p className="text-[10px] text-[#C9A15B] uppercase tracking-wider font-bold">Selected Evening Slot</p>
+                <p className="text-sm font-bold text-[#241E20]">{selectedSlot}</p>
               </div>
             </div>
 
@@ -207,7 +207,7 @@ export const BookPage = ({ initialConfig }: BookPageProps) => {
                 onClick={() => setModalOpen(true)}
                 className="w-full py-4 rounded-2xl aurawed-button-primary text-sm uppercase tracking-widest font-bold flex items-center justify-center gap-2 cursor-pointer shadow-xl"
               >
-                <Sparkles className="w-4 h-4 text-[#DFB776]" />
+                <Sparkles className="w-4 h-4 text-[#C9A15B]" />
                 <span>Submit Reservation Request</span>
               </button>
 
@@ -230,7 +230,7 @@ export const BookPage = ({ initialConfig }: BookPageProps) => {
               </a>
             </div>
 
-            <p className="text-center text-xs text-[#8C6D46] font-light">
+            <p className="text-center text-xs text-[#C9A15B] font-light">
               Our senior concierge responds within 2 hours. Complete privacy guaranteed.
             </p>
           </div>

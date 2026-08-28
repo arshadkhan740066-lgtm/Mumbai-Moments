@@ -142,34 +142,34 @@ export const TargetAreasSection: React.FC<TargetAreasSectionProps> = ({
   };
 
   return (
-    <section id="targeted-areas" className="py-14 sm:py-20 bg-[#FAF7F2] border-b border-[#E5D9C8] relative overflow-hidden">
+    <section id="targeted-areas" className="py-14 sm:py-20 bg-[#FFFDFB] border-b border-[#E8D9DC] relative overflow-hidden">
       {/* Subtle Romantic Heart & Starlight Background Watermarks */}
-      <div className="absolute top-6 left-1/4 opacity-10 pointer-events-none text-[#6B1724]">
-        <Heart className="w-48 sm:w-64 h-48 sm:h-64 stroke-1 fill-[#DFB776]/20" />
+      <div className="absolute top-6 left-1/4 opacity-10 pointer-events-none text-[#8F3F50]">
+        <Heart className="w-48 sm:w-64 h-48 sm:h-64 stroke-1 fill-[#C9A15B]/20" />
       </div>
-      <div className="absolute bottom-6 right-8 opacity-10 pointer-events-none text-[#6B1724]">
-        <Sparkles className="w-36 sm:w-48 h-36 sm:h-48 stroke-1 text-[#DFB776]" />
+      <div className="absolute bottom-6 right-8 opacity-10 pointer-events-none text-[#8F3F50]">
+        <Sparkles className="w-36 sm:w-48 h-36 sm:h-48 stroke-1 text-[#C9A15B]" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
-          <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 rounded-full bg-[#FAF0E1] border border-[#DFCDB7] mb-3 sm:mb-4 shadow-xs">
-            <Crown className="w-3.5 h-3.5 text-[#DFB776]" />
-            <span className="text-[10px] sm:text-xs uppercase tracking-wider sm:tracking-widest font-bold text-[#6B1724]">
+          <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 rounded-full bg-[#F8EDEF] border border-[#E8D9DC] mb-3 sm:mb-4 shadow-xs">
+            <Crown className="w-3.5 h-3.5 text-[#C9A15B]" />
+            <span className="text-[10px] sm:text-xs uppercase tracking-wider sm:tracking-widest font-bold text-[#8F3F50]">
               Prime Mumbai Locations & Flagship Kurla Venue
             </span>
           </div>
 
-          <h2 className="font-serif-display text-2xl sm:text-4xl text-[#1E1B18] font-bold tracking-tight px-1">
+          <h2 className="font-serif-display text-2xl sm:text-4xl text-[#241E20] font-bold tracking-tight px-1">
             Flagship Venue Sanctuary in Kurla West
             <br />
-            <span className="text-[#6B1724] italic text-xl sm:text-3xl font-medium block mt-1">
+            <span className="text-[#8F3F50] italic text-xl sm:text-3xl font-medium block mt-1">
               Swift 5–12 Min VIP Access from Sion • Dadar • Kurla • Mahim • Wadala • Chembur
             </span>
           </h2>
 
-          <p className="text-xs sm:text-base text-[#52453E] font-light mt-3 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-xs sm:text-base text-[#5C4E52] font-light mt-3 leading-relaxed max-w-2xl mx-auto">
             Centrally located in Kurla West (adjacent to BKC corridor), our 100% private estate is easily accessible for couples across Central Mumbai. Enjoy door-to-door luxury Mercedes/BMW chauffeured transfers, bespoke private chef dining, and tailor-made romantic setups.
           </p>
         </div>
@@ -188,17 +188,17 @@ export const TargetAreasSection: React.FC<TargetAreasSectionProps> = ({
                 }}
                 className={`px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide transition-all duration-300 flex items-center gap-1.5 sm:gap-2 cursor-pointer shadow-xs ${
                   isSelected
-                    ? 'bg-[#6B1724] text-white border-2 border-[#DFB776] shadow-md scale-102 sm:scale-105'
-                    : 'bg-white text-[#52453E] border border-[#DFCDB7] hover:border-[#6B1724] hover:bg-[#FAF0E1]'
+                    ? 'bg-[#8F3F50] text-white border-2 border-[#C9A15B] shadow-md scale-102 sm:scale-105'
+                    : 'bg-white text-[#5C4E52] border border-[#E8D9DC] hover:border-[#8F3F50] hover:bg-[#F8EDEF]'
                 }`}
               >
                 <span className="text-sm sm:text-base">{area.iconSymbol}</span>
                 <span className="font-bold whitespace-nowrap">
-                  {area.name} {isKurla && <span className="text-[10px] text-[#DFB776] ml-1">(Venue)</span>}
+                  {area.name} {isKurla && <span className="text-[10px] text-[#C9A15B] ml-1">(Venue)</span>}
                 </span>
                 <span
                   className={`text-[9px] sm:text-[10px] px-1.5 sm:px-2 py-0.5 rounded-full font-medium whitespace-nowrap ${
-                    isSelected ? 'bg-[#DFB776] text-[#1E1B18]' : 'bg-[#FAF0E1] text-[#6B1724]'
+                    isSelected ? 'bg-[#C9A15B] text-[#241E20]' : 'bg-[#F8EDEF] text-[#8F3F50]'
                   }`}
                 >
                   {area.driveTimeMins}
@@ -211,54 +211,54 @@ export const TargetAreasSection: React.FC<TargetAreasSectionProps> = ({
         {/* Active Neighborhood Feature Card & AI Route Architect Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
           {/* Left Column: Neighborhood Romance Profile (5 cols) */}
-          <div className="lg:col-span-5 bg-white rounded-3xl border border-[#DFCDB7] p-5 sm:p-7 shadow-md relative overflow-hidden">
+          <div className="lg:col-span-5 bg-white rounded-3xl border border-[#E8D9DC] p-5 sm:p-7 shadow-md relative overflow-hidden">
             {/* Top Badge & Love Emblem */}
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#EBE2D5] pb-4 mb-5">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#E8D9DC] pb-4 mb-5">
               <div className="flex items-center gap-3">
-                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-[#FAF0E1] border border-[#DFCDB7] flex items-center justify-center text-xl sm:text-2xl shadow-xs shrink-0">
+                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-[#F8EDEF] border border-[#E8D9DC] flex items-center justify-center text-xl sm:text-2xl shadow-xs shrink-0">
                   {currentArea.iconSymbol}
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase font-bold tracking-widest text-[#8C6D46] block">
+                  <span className="text-[10px] uppercase font-bold tracking-widest text-[#C9A15B] block">
                     {currentArea.id === 'Kurla' ? 'Prime Venue Destination' : 'Central Mumbai Corridor'}
                   </span>
-                  <h3 className="font-serif-display text-lg sm:text-xl font-bold text-[#1E1B18]">
+                  <h3 className="font-serif-display text-lg sm:text-xl font-bold text-[#241E20]">
                     {currentArea.name} Edition
                   </h3>
                 </div>
               </div>
 
-              <div className="flex sm:flex-col items-center sm:items-end justify-between sm:justify-center bg-[#FCFAF7] sm:bg-transparent px-3 py-1.5 sm:p-0 rounded-xl sm:rounded-none border sm:border-0 border-[#EBE2D5]">
-                <span className="text-[10px] sm:text-[11px] text-[#736359]">Kurla Venue Access</span>
-                <span className="text-xs sm:text-sm font-bold text-[#6B1724] flex items-center gap-1">
-                  <Car className="w-3.5 h-3.5 text-[#DFB776]" />
+              <div className="flex sm:flex-col items-center sm:items-end justify-between sm:justify-center bg-[#FFFDFB] sm:bg-transparent px-3 py-1.5 sm:p-0 rounded-xl sm:rounded-none border sm:border-0 border-[#E8D9DC]">
+                <span className="text-[10px] sm:text-[11px] text-[#5C4E52]">Kurla Venue Access</span>
+                <span className="text-xs sm:text-sm font-bold text-[#8F3F50] flex items-center gap-1">
+                  <Car className="w-3.5 h-3.5 text-[#C9A15B]" />
                   {currentArea.driveTimeMins}
                 </span>
               </div>
             </div>
 
             {/* Tagline & Love Quote */}
-            <div className="mb-5 p-3.5 sm:p-4 rounded-2xl bg-[#FCFAF7] border border-[#EBE2D5]">
-              <div className="flex items-center gap-1.5 text-xs font-bold text-[#6B1724] mb-1">
-                <Heart className="w-3.5 h-3.5 fill-[#DFB776] text-[#DFB776]" />
+            <div className="mb-5 p-3.5 sm:p-4 rounded-2xl bg-[#FFFDFB] border border-[#E8D9DC]">
+              <div className="flex items-center gap-1.5 text-xs font-bold text-[#8F3F50] mb-1">
+                <Heart className="w-3.5 h-3.5 fill-[#C9A15B] text-[#C9A15B]" />
                 <span>Romantic Atmosphere:</span>
               </div>
-              <p className="text-xs text-[#52453E] italic leading-relaxed">
+              <p className="text-xs text-[#5C4E52] italic leading-relaxed">
                 "{currentArea.loveQuote}"
               </p>
             </div>
 
             {/* Key Romantic Landmarks in this Area */}
             <div className="mb-5 space-y-2">
-              <span className="text-xs font-bold text-[#1E1B18] flex items-center gap-1.5">
-                <Compass className="w-3.5 h-3.5 text-[#6B1724]" />
+              <span className="text-xs font-bold text-[#241E20] flex items-center gap-1.5">
+                <Compass className="w-3.5 h-3.5 text-[#8F3F50]" />
                 <span>Nostalgic Couple Landmarks:</span>
               </span>
               <div className="flex flex-wrap gap-1.5">
                 {currentArea.romanticLandmarks.map((lm, idx) => (
                   <span
                     key={idx}
-                    className="text-[10px] sm:text-[11px] px-2.5 py-1 rounded-full bg-[#FAF5EE] border border-[#E5D9C8] text-[#52453E]"
+                    className="text-[10px] sm:text-[11px] px-2.5 py-1 rounded-full bg-[#FFFDFB] border border-[#E8D9DC] text-[#5C4E52]"
                   >
                     📍 {lm}
                   </span>
@@ -267,25 +267,25 @@ export const TargetAreasSection: React.FC<TargetAreasSectionProps> = ({
             </div>
 
             {/* VIP Chauffeur Pickup Perks */}
-            <div className="mb-5 p-3.5 sm:p-4 rounded-2xl bg-[#FAF0E1]/80 border border-[#DFCDB7]">
-              <div className="flex items-center gap-2 mb-1.5 text-xs font-bold text-[#6B1724]">
-                <ShieldCheck className="w-4 h-4 text-[#DFB776] shrink-0" />
+            <div className="mb-5 p-3.5 sm:p-4 rounded-2xl bg-[#F8EDEF]/80 border border-[#E8D9DC]">
+              <div className="flex items-center gap-2 mb-1.5 text-xs font-bold text-[#8F3F50]">
+                <ShieldCheck className="w-4 h-4 text-[#C9A15B] shrink-0" />
                 <span>VIP Chauffeur & Transit Advantage:</span>
               </div>
-              <p className="text-xs text-[#52453E] leading-relaxed">
+              <p className="text-xs text-[#5C4E52] leading-relaxed">
                 {currentArea.pickupHighlight}
               </p>
             </div>
 
             {/* Suggested Matching Setup */}
-            <div className="border-t border-[#EBE2D5] pt-4 space-y-2 text-xs">
-              <div className="flex justify-between items-center text-[#736359]">
+            <div className="border-t border-[#E8D9DC] pt-4 space-y-2 text-xs">
+              <div className="flex justify-between items-center text-[#5C4E52]">
                 <span>Recommended Space:</span>
-                <span className="font-semibold text-[#1E1B18] text-right">{currentArea.recommendedSpace}</span>
+                <span className="font-semibold text-[#241E20] text-right">{currentArea.recommendedSpace}</span>
               </div>
-              <div className="flex justify-between items-center text-[#736359]">
+              <div className="flex justify-between items-center text-[#5C4E52]">
                 <span>Curated Theme:</span>
-                <span className="font-semibold text-[#6B1724] text-right">{currentArea.recommendedTheme}</span>
+                <span className="font-semibold text-[#8F3F50] text-right">{currentArea.recommendedTheme}</span>
               </div>
             </div>
 
@@ -294,34 +294,34 @@ export const TargetAreasSection: React.FC<TargetAreasSectionProps> = ({
               onClick={handleApplyToBuilder}
               className="mt-5 w-full py-3 rounded-full aurawed-button-primary text-xs uppercase tracking-wider font-semibold flex items-center justify-center gap-2 cursor-pointer shadow-sm"
             >
-              <Sparkles className="w-4 h-4 text-[#DFB776]" />
+              <Sparkles className="w-4 h-4 text-[#C9A15B]" />
               <span>Customize for {currentArea.name} Couple</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>
 
           {/* Right Column: AI Neighborhood Date & Proposal Roadmap Generator (7 cols) */}
-          <div className="lg:col-span-7 bg-white rounded-3xl border border-[#DFCDB7] p-5 sm:p-7 shadow-md">
+          <div className="lg:col-span-7 bg-white rounded-3xl border border-[#E8D9DC] p-5 sm:p-7 shadow-md">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-5">
               <div>
-                <span className="text-[10px] uppercase font-bold tracking-widest text-[#8C6D46] flex items-center gap-1.5">
-                  <Sparkles className="w-3.5 h-3.5 text-[#DFB776] animate-pulse" />
+                <span className="text-[10px] uppercase font-bold tracking-widest text-[#C9A15B] flex items-center gap-1.5">
+                  <Sparkles className="w-3.5 h-3.5 text-[#C9A15B] animate-pulse" />
                   <span>Aura Love AI™ Automation</span>
                 </span>
-                <h3 className="font-serif-display text-lg sm:text-xl font-bold text-[#1E1B18]">
+                <h3 className="font-serif-display text-lg sm:text-xl font-bold text-[#241E20]">
                   Automated {currentArea.name} Proposal Roadmap & Story
                 </h3>
               </div>
 
-              <div className="hidden sm:flex w-9 h-9 rounded-full bg-[#FAF0E1] border border-[#DFCDB7] items-center justify-center text-[#6B1724] shrink-0">
-                <Heart className="w-4 h-4 fill-[#DFB776] text-[#DFB776]" />
+              <div className="hidden sm:flex w-9 h-9 rounded-full bg-[#F8EDEF] border border-[#E8D9DC] items-center justify-center text-[#8F3F50] shrink-0">
+                <Heart className="w-4 h-4 fill-[#C9A15B] text-[#C9A15B]" />
               </div>
             </div>
 
             {/* Input fields for couple personalization */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-5">
               <div>
-                <label className="block text-xs font-bold text-[#1E1B18] mb-1">
+                <label className="block text-xs font-bold text-[#241E20] mb-1">
                   Couple Names / Initials:
                 </label>
                 <input
@@ -329,12 +329,12 @@ export const TargetAreasSection: React.FC<TargetAreasSectionProps> = ({
                   value={coupleNames}
                   onChange={(e) => setCoupleNames(e.target.value)}
                   placeholder="e.g. Rohan & Simran"
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-[#DFCDB7] bg-[#FCFAF7] text-xs focus:outline-none focus:border-[#6B1724]"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-[#E8D9DC] bg-[#FFFDFB] text-xs focus:outline-none focus:border-[#8F3F50]"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-[#1E1B18] mb-1">
+                <label className="block text-xs font-bold text-[#241E20] mb-1">
                   Special Memory in {currentArea.name}:
                 </label>
                 <input
@@ -342,7 +342,7 @@ export const TargetAreasSection: React.FC<TargetAreasSectionProps> = ({
                   value={specialMemoryInput}
                   onChange={(e) => setSpecialMemoryInput(e.target.value)}
                   placeholder={`e.g. ${currentArea.romanticLandmarks[0]}`}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-[#DFCDB7] bg-[#FCFAF7] text-xs focus:outline-none focus:border-[#6B1724]"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-[#E8D9DC] bg-[#FFFDFB] text-xs focus:outline-none focus:border-[#8F3F50]"
                 />
               </div>
             </div>
@@ -351,9 +351,9 @@ export const TargetAreasSection: React.FC<TargetAreasSectionProps> = ({
             <button
               onClick={handleGenerateAIRoute}
               disabled={isGeneratingRoute}
-              className="w-full py-3 px-3 rounded-full bg-[#FAF0E1] hover:bg-[#F5ECE1] border border-[#DFCDB7] text-[#6B1724] font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer transition-all shadow-xs disabled:opacity-50 mb-5 text-center leading-tight"
+              className="w-full py-3 px-3 rounded-full bg-[#F8EDEF] hover:bg-[#F8EDEF] border border-[#E8D9DC] text-[#8F3F50] font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer transition-all shadow-xs disabled:opacity-50 mb-5 text-center leading-tight"
             >
-              <Sparkles className={`w-4 h-4 text-[#DFB776] shrink-0 ${isGeneratingRoute ? 'animate-spin' : ''}`} />
+              <Sparkles className={`w-4 h-4 text-[#C9A15B] shrink-0 ${isGeneratingRoute ? 'animate-spin' : ''}`} />
               <span>
                 {isGeneratingRoute
                   ? `Weaving ${currentArea.name} Love Story...`
@@ -366,14 +366,14 @@ export const TargetAreasSection: React.FC<TargetAreasSectionProps> = ({
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="bg-[#FCFAF7] border border-[#DFCDB7] rounded-2xl p-4 sm:p-5 space-y-4"
+                className="bg-[#FFFDFB] border border-[#E8D9DC] rounded-2xl p-4 sm:p-5 space-y-4"
               >
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#EBE2D5] pb-3">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#E8D9DC] pb-3">
                   <div>
-                    <h4 className="font-serif-display font-bold text-sm sm:text-base text-[#1E1B18]">
+                    <h4 className="font-serif-display font-bold text-sm sm:text-base text-[#241E20]">
                       {generatedRoute.routeName}
                     </h4>
-                    <span className="text-[11px] text-[#736359] block mt-0.5">
+                    <span className="text-[11px] text-[#5C4E52] block mt-0.5">
                       Venue Transit ETA: {generatedRoute.transitETA} • 100% Private Kurla Estate
                     </span>
                   </div>
@@ -396,7 +396,7 @@ export const TargetAreasSection: React.FC<TargetAreasSectionProps> = ({
                         setIsCopied(true);
                         setTimeout(() => setIsCopied(false), 2000);
                       }}
-                      className="p-1.5 rounded-full bg-white border border-[#DFCDB7] text-[#52453E] hover:text-[#1E1B18] text-xs cursor-pointer flex items-center gap-1"
+                      className="p-1.5 rounded-full bg-white border border-[#E8D9DC] text-[#5C4E52] hover:text-[#241E20] text-xs cursor-pointer flex items-center gap-1"
                       title="Copy itinerary"
                     >
                       {isCopied ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
@@ -404,7 +404,7 @@ export const TargetAreasSection: React.FC<TargetAreasSectionProps> = ({
                   </div>
                 </div>
 
-                <p className="text-xs text-[#52453E] italic leading-relaxed bg-white p-3 rounded-xl border border-[#EBE2D5]">
+                <p className="text-xs text-[#5C4E52] italic leading-relaxed bg-white p-3 rounded-xl border border-[#E8D9DC]">
                   "{generatedRoute.romanticNarrative}"
                 </p>
 
@@ -413,24 +413,24 @@ export const TargetAreasSection: React.FC<TargetAreasSectionProps> = ({
                   {generatedRoute.steps.map((step) => (
                     <div
                       key={step.stepNumber}
-                      className="flex items-start gap-2.5 sm:gap-3 bg-white p-2.5 sm:p-3 rounded-xl border border-[#EBE2D5]"
+                      className="flex items-start gap-2.5 sm:gap-3 bg-white p-2.5 sm:p-3 rounded-xl border border-[#E8D9DC]"
                     >
-                      <span className="w-6 h-6 rounded-full bg-[#FAF0E1] text-[#6B1724] font-bold text-[10px] flex items-center justify-center shrink-0 mt-0.5">
+                      <span className="w-6 h-6 rounded-full bg-[#F8EDEF] text-[#8F3F50] font-bold text-[10px] flex items-center justify-center shrink-0 mt-0.5">
                         {step.stepNumber}
                       </span>
                       <div className="flex-1 min-w-0">
-                        <div className="flex flex-col sm:flex-row sm:items-center justify-between text-xs font-bold text-[#1E1B18] gap-0.5 sm:gap-2">
+                        <div className="flex flex-col sm:flex-row sm:items-center justify-between text-xs font-bold text-[#241E20] gap-0.5 sm:gap-2">
                           <span className="truncate">{step.title}</span>
-                          <span className="text-[10px] text-[#8C6D46] font-mono shrink-0">{step.time}</span>
+                          <span className="text-[10px] text-[#C9A15B] font-mono shrink-0">{step.time}</span>
                         </div>
-                        <p className="text-[11px] text-[#736359] mt-0.5 leading-normal">{step.detail}</p>
+                        <p className="text-[11px] text-[#5C4E52] mt-0.5 leading-normal">{step.detail}</p>
                       </div>
                     </div>
                   ))}
                 </div>
 
                 {/* Love Vow */}
-                <div className="p-3 bg-[#FAF0E1] rounded-xl border border-[#DFCDB7] text-xs text-[#6B1724]">
+                <div className="p-3 bg-[#F8EDEF] rounded-xl border border-[#E8D9DC] text-xs text-[#8F3F50]">
                   <span className="font-bold block mb-0.5">💌 Curated Proposal Toast:</span>
                   <span className="italic font-serif-display">"{generatedRoute.loveVowSuggestion}"</span>
                 </div>
@@ -439,19 +439,19 @@ export const TargetAreasSection: React.FC<TargetAreasSectionProps> = ({
                   onClick={handleApplyToBuilder}
                   className="w-full py-2.5 sm:py-3 rounded-full aurawed-button-primary text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2 cursor-pointer shadow-xs text-center"
                 >
-                  <Sparkles className="w-3.5 h-3.5 text-[#DFB776]" />
+                  <Sparkles className="w-3.5 h-3.5 text-[#C9A15B]" />
                   <span>Transfer Itinerary to Experience Builder</span>
                 </button>
               </motion.div>
             ) : (
-              <div className="p-6 sm:p-8 text-center bg-[#FCFAF7] rounded-2xl border border-dashed border-[#DFCDB7] space-y-3">
-                <div className="w-12 h-12 rounded-full bg-[#FAF0E1] text-[#6B1724] mx-auto flex items-center justify-center text-xl">
+              <div className="p-6 sm:p-8 text-center bg-[#FFFDFB] rounded-2xl border border-dashed border-[#E8D9DC] space-y-3">
+                <div className="w-12 h-12 rounded-full bg-[#F8EDEF] text-[#8F3F50] mx-auto flex items-center justify-center text-xl">
                   {currentArea.iconSymbol}
                 </div>
-                <h4 className="font-serif-display font-bold text-sm text-[#1E1B18]">
+                <h4 className="font-serif-display font-bold text-sm text-[#241E20]">
                   Automate a Bespoke Date Starting from {currentArea.name}
                 </h4>
-                <p className="text-xs text-[#736359] max-w-sm mx-auto leading-relaxed">
+                <p className="text-xs text-[#5C4E52] max-w-sm mx-auto leading-relaxed">
                   Click the button above to generate a customized chauffeur timeline, scenic arrival cue at Kurla estate, live acoustic song transition, and private chef tasting sequence.
                 </p>
               </div>

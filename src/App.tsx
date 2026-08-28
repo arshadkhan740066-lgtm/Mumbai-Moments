@@ -94,14 +94,14 @@ export default function App() {
   const openInquiry = () => setIsInquiryModalOpen(true);
 
   return (
-    <div className="min-h-screen bg-[#FCFAF7] text-[#1E1B18] font-sans selection:bg-[#6B1724] selection:text-white relative overflow-hidden">
+    <div className="min-h-screen bg-[#FFFDFB] text-[#241E20] font-sans selection:bg-[#8F3F50] selection:text-white relative overflow-hidden">
       <ScrollToTop />
 
       {/* Ambient warm luxury background glow */}
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-        <div className="absolute -top-40 -left-40 w-[600px] h-[600px] bg-[#C59A5D]/6 rounded-full blur-[140px]" />
-        <div className="absolute top-1/3 -right-40 w-[500px] h-[500px] bg-[#6B1724]/4 rounded-full blur-[160px]" />
-        <div className="absolute bottom-1/4 left-1/4 w-[600px] h-[600px] bg-[#E5D9C8]/35 rounded-full blur-[180px]" />
+        <div className="absolute -top-40 -left-40 w-[600px] h-[600px] bg-[#C9A15B]/6 rounded-full blur-[140px]" />
+        <div className="absolute top-1/3 -right-40 w-[500px] h-[500px] bg-[#8F3F50]/4 rounded-full blur-[160px]" />
+        <div className="absolute bottom-1/4 left-1/4 w-[600px] h-[600px] bg-[#E8D9DC]/35 rounded-full blur-[180px]" />
       </div>
 
       {/* Navigation */}
@@ -194,11 +194,11 @@ export default function App() {
             path="*"
             element={
               <div className="min-h-screen flex flex-col items-center justify-center text-center pt-32 pb-20 px-4">
-                <h1 className="font-serif-display text-6xl font-bold text-[#6B1724] mb-3">404</h1>
-                <p className="font-cursive text-3xl text-[#C59A5D] mb-6">Page Not Found</p>
-                <p className="text-sm text-[#52453E] font-light mb-8">The page you're looking for doesn't exist. Let's get you back on track.</p>
+                <h1 className="font-serif-display text-6xl font-bold text-[#8F3F50] mb-3">404</h1>
+                <p className="font-cursive text-3xl text-[#C9A15B] mb-6">Page Not Found</p>
+                <p className="text-sm text-[#5C4E52] font-light mb-8">The page you're looking for doesn't exist. Let's get you back on track.</p>
                 <button onClick={() => navigate('/')} className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full aurawed-button-primary text-xs uppercase tracking-widest font-bold cursor-pointer">
-                  <Heart className="w-4 h-4 text-[#DFB776]" />
+                  <Heart className="w-4 h-4 text-[#C9A15B]" />
                   <span>Return Home</span>
                 </button>
               </div>
@@ -211,16 +211,16 @@ export default function App() {
       <div className="fixed bottom-6 right-6 z-40">
         <button
           onClick={() => setIsLoveAIConciergeOpen(true)}
-          className="group flex items-center gap-2.5 px-4 sm:px-5 py-3 rounded-full bg-[#6B1724] hover:bg-[#831D2D] text-white border-2 border-[#DFB776] shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
+          className="group flex items-center gap-2.5 px-4 sm:px-5 py-3 rounded-full bg-[#8F3F50] hover:bg-[#8F3F50] text-white border-2 border-[#C9A15B] shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
           title="Open Love AI Concierge"
           aria-label="Open Love AI Concierge"
         >
-          <div className="w-6 h-6 rounded-full bg-[#DFB776]/20 flex items-center justify-center text-[#DFB776]">
+          <div className="w-6 h-6 rounded-full bg-[#C9A15B]/20 flex items-center justify-center text-[#C9A15B]">
             <Sparkles className="w-4 h-4 animate-spin" style={{ animationDuration: '6s' }} />
           </div>
           <span className="text-xs sm:text-sm font-semibold tracking-wide flex items-center gap-1.5 font-serif-display">
             <span>Love AI Concierge</span>
-            <Heart className="w-3.5 h-3.5 fill-[#DFB776] text-[#DFB776]" />
+            <Heart className="w-3.5 h-3.5 fill-[#C9A15B] text-[#C9A15B]" />
           </span>
         </button>
       </div>

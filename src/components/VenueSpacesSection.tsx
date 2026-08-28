@@ -9,19 +9,19 @@ interface VenueSpacesSectionProps {
 
 export const VenueSpacesSection = ({ onSelectSpaceForBuilder }: VenueSpacesSectionProps) => {
   return (
-    <section id="private-spaces" className="py-16 sm:py-24 bg-[#FAF7F2] border-b border-[#E5D9C8]">
+    <section id="private-spaces" className="py-16 sm:py-24 bg-[#FFFDFB] border-b border-[#E8D9DC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#DFCDB7] text-[#6B1724] text-xs font-semibold uppercase tracking-widest mb-3 shadow-xs">
-            <Sparkles className="w-3.5 h-3.5 text-[#C59A5D]" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#E8D9DC] text-[#8F3F50] text-xs font-semibold uppercase tracking-widest mb-3 shadow-xs">
+            <Sparkles className="w-3.5 h-3.5 text-[#C9A15B]" />
             <span>Pali Hill Private Estate</span>
           </div>
 
-          <h2 className="font-serif-display text-3xl sm:text-5xl font-bold text-[#1E1B18] tracking-tight">
+          <h2 className="font-serif-display text-3xl sm:text-5xl font-bold text-[#241E20] tracking-tight">
             Explore The Venue Zones
           </h2>
-          <p className="text-sm sm:text-base text-[#52453E] font-light mt-3 leading-relaxed">
+          <p className="text-sm sm:text-base text-[#5C4E52] font-light mt-3 leading-relaxed">
             Our private estate features multiple distinct spaces designed for complete acoustic and visual intimacy. Whichever zone you select is 100% private to you.
           </p>
         </div>
@@ -35,10 +35,10 @@ export const VenueSpacesSection = ({ onSelectSpaceForBuilder }: VenueSpacesSecti
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4 }}
-              className="bg-white rounded-3xl border border-[#E5D9C8] overflow-hidden shadow-[0_4px_20px_rgba(80,50,30,0.04)] flex flex-col group"
+              className="bg-white rounded-3xl border border-[#E8D9DC] overflow-hidden shadow-[0_4px_20px_rgba(80,50,30,0.04)] flex flex-col group"
             >
               {/* Image with overlay badge */}
-              <div className="relative aspect-[16/10] overflow-hidden bg-[#F0E6D8]">
+              <div className="relative aspect-[16/10] overflow-hidden bg-[#F8EDEF]">
                 <img
                   src={space.image}
                   alt={space.name}
@@ -47,14 +47,14 @@ export const VenueSpacesSection = ({ onSelectSpaceForBuilder }: VenueSpacesSecti
                 <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
 
                 <div className="absolute top-4 left-4 flex items-center gap-2">
-                  <span className="px-3 py-1 rounded-full bg-white/95 text-[10px] uppercase tracking-widest text-[#6B1724] font-bold shadow-xs flex items-center gap-1.5">
-                    <Lock className="w-3 h-3 text-[#C59A5D]" />
+                  <span className="px-3 py-1 rounded-full bg-white/95 text-[10px] uppercase tracking-widest text-[#8F3F50] font-bold shadow-xs flex items-center gap-1.5">
+                    <Lock className="w-3 h-3 text-[#C9A15B]" />
                     <span>{space.privacyLevel}</span>
                   </span>
                 </div>
 
                 <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <div className="flex items-center gap-1 text-[11px] text-[#DFB776] font-semibold uppercase tracking-wider mb-1">
+                  <div className="flex items-center gap-1 text-[11px] text-[#C9A15B] font-semibold uppercase tracking-wider mb-1">
                     <MapPin className="w-3.5 h-3.5" />
                     <span>{space.viewType}</span>
                   </div>
@@ -67,23 +67,23 @@ export const VenueSpacesSection = ({ onSelectSpaceForBuilder }: VenueSpacesSecti
               {/* Space Details */}
               <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
                 <div>
-                  <p className="text-xs text-[#8C6D46] font-semibold uppercase tracking-wider">
+                  <p className="text-xs text-[#C9A15B] font-semibold uppercase tracking-wider">
                     {space.tagline}
                   </p>
-                  <p className="text-xs text-[#52453E] font-light mt-2 leading-relaxed">
+                  <p className="text-xs text-[#5C4E52] font-light mt-2 leading-relaxed">
                     {space.description}
                   </p>
                 </div>
 
                 {/* Key Features List */}
-                <div className="space-y-2 pt-3 border-t border-[#EBE2D5]">
-                  <span className="text-[10px] uppercase tracking-wider text-[#8C6D46] font-bold block">
+                <div className="space-y-2 pt-3 border-t border-[#E8D9DC]">
+                  <span className="text-[10px] uppercase tracking-wider text-[#C9A15B] font-bold block">
                     Architectural Features:
                   </span>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     {space.keyFeatures.map((feat, i) => (
-                      <div key={i} className="flex items-start gap-2 text-xs text-[#52453E]">
-                        <Check className="w-3.5 h-3.5 text-[#6B1724] flex-shrink-0 mt-0.5" />
+                      <div key={i} className="flex items-start gap-2 text-xs text-[#5C4E52]">
+                        <Check className="w-3.5 h-3.5 text-[#8F3F50] flex-shrink-0 mt-0.5" />
                         <span className="text-[11px]">{feat}</span>
                       </div>
                     ))}
@@ -91,10 +91,10 @@ export const VenueSpacesSection = ({ onSelectSpaceForBuilder }: VenueSpacesSecti
                 </div>
 
                 {/* Action to book this space */}
-                <div className="pt-3 border-t border-[#EBE2D5]">
+                <div className="pt-3 border-t border-[#E8D9DC]">
                   <button
                     onClick={() => onSelectSpaceForBuilder(space.name)}
-                    className="w-full py-2.5 rounded-full aurawed-button-secondary text-xs uppercase tracking-wider font-semibold text-center cursor-pointer hover:border-[#6B1724]"
+                    className="w-full py-2.5 rounded-full aurawed-button-secondary text-xs uppercase tracking-wider font-semibold text-center cursor-pointer hover:border-[#8F3F50]"
                   >
                     Select {space.name} in Experience Builder
                   </button>

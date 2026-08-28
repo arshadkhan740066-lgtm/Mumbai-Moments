@@ -111,22 +111,22 @@ export const LoveAIConciergeModal: React.FC<LoveAIConciergeModalProps> = ({
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
-          className="bg-white rounded-3xl border border-[#DFCDB7] shadow-2xl w-full max-w-2xl max-h-[85vh] flex flex-col overflow-hidden relative"
+          className="bg-white rounded-3xl border border-[#E8D9DC] shadow-2xl w-full max-w-2xl max-h-[85vh] flex flex-col overflow-hidden relative"
         >
           {/* Header */}
-          <div className="p-4 sm:p-5 bg-[#FAF4EC] border-b border-[#E5D9C8] flex items-center justify-between">
+          <div className="p-4 sm:p-5 bg-[#F8EDEF] border-b border-[#E8D9DC] flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-[#6B1724] border border-[#DFB776] flex items-center justify-center text-white shadow-xs">
-                <Sparkles className="w-5 h-5 text-[#DFB776]" />
+              <div className="w-10 h-10 rounded-full bg-[#8F3F50] border border-[#C9A15B] flex items-center justify-center text-white shadow-xs">
+                <Sparkles className="w-5 h-5 text-[#C9A15B]" />
               </div>
               <div>
-                <h3 className="font-serif-display font-bold text-base text-[#1E1B18] flex items-center gap-2">
+                <h3 className="font-serif-display font-bold text-base text-[#241E20] flex items-center gap-2">
                   <span>Aura Love AI™ Assistant</span>
-                  <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-[#FAF0E1] text-[#6B1724] border border-[#DFCDB7]">
+                  <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-[#F8EDEF] text-[#8F3F50] border border-[#E8D9DC]">
                     Live Concierge
                   </span>
                 </h3>
-                <p className="text-[11px] text-[#736359]">
+                <p className="text-[11px] text-[#5C4E52]">
                   Instant romantic ideas, proposal speeches & custom venue tips
                 </p>
               </div>
@@ -134,30 +134,30 @@ export const LoveAIConciergeModal: React.FC<LoveAIConciergeModalProps> = ({
 
             <button
               onClick={onClose}
-              className="w-8 h-8 rounded-full bg-white border border-[#DFCDB7] flex items-center justify-center text-[#52453E] hover:bg-[#F5ECE1] cursor-pointer"
+              className="w-8 h-8 rounded-full bg-white border border-[#E8D9DC] flex items-center justify-center text-[#5C4E52] hover:bg-[#F8EDEF] cursor-pointer"
             >
               <X className="w-4 h-4" />
             </button>
           </div>
 
           {/* Chat Messages Body */}
-          <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-4 bg-[#FCFAF7]">
+          <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-4 bg-[#FFFDFB]">
             {messages.map((msg, index) => (
               <div
                 key={index}
                 className={`flex gap-3 ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
               >
                 {msg.role === 'assistant' && (
-                  <div className="w-7 h-7 rounded-full bg-[#6B1724] text-white flex items-center justify-center shrink-0 text-xs shadow-xs mt-1">
-                    <Heart className="w-3.5 h-3.5 fill-[#DFB776] text-[#DFB776]" />
+                  <div className="w-7 h-7 rounded-full bg-[#8F3F50] text-white flex items-center justify-center shrink-0 text-xs shadow-xs mt-1">
+                    <Heart className="w-3.5 h-3.5 fill-[#C9A15B] text-[#C9A15B]" />
                   </div>
                 )}
 
                 <div
                   className={`max-w-[85%] sm:max-w-[80%] rounded-2xl p-4 text-xs sm:text-sm leading-relaxed ${
                     msg.role === 'user'
-                      ? 'bg-[#6B1724] text-white rounded-tr-xs shadow-xs'
-                      : 'bg-white text-[#2E2824] border border-[#DFCDB7] rounded-tl-xs shadow-xs relative group'
+                      ? 'bg-[#8F3F50] text-white rounded-tr-xs shadow-xs'
+                      : 'bg-white text-[#241E20] border border-[#E8D9DC] rounded-tl-xs shadow-xs relative group'
                   }`}
                 >
                   <p className="whitespace-pre-line">{msg.text}</p>
@@ -165,7 +165,7 @@ export const LoveAIConciergeModal: React.FC<LoveAIConciergeModalProps> = ({
                   {msg.role === 'assistant' && index > 0 && (
                     <button
                       onClick={() => handleCopy(msg.text, index)}
-                      className="absolute bottom-2 right-2 p-1.5 rounded-md bg-[#FAF7F2] text-[#8C6D46] hover:text-[#1E1B18] border border-[#DFCDB7] opacity-80 hover:opacity-100 text-[10px] flex items-center gap-1 cursor-pointer"
+                      className="absolute bottom-2 right-2 p-1.5 rounded-md bg-[#FFFDFB] text-[#C9A15B] hover:text-[#241E20] border border-[#E8D9DC] opacity-80 hover:opacity-100 text-[10px] flex items-center gap-1 cursor-pointer"
                     >
                       {copiedIndex === index ? (
                         <>
@@ -186,10 +186,10 @@ export const LoveAIConciergeModal: React.FC<LoveAIConciergeModalProps> = ({
 
             {isLoading && (
               <div className="flex gap-3 justify-start">
-                <div className="w-7 h-7 rounded-full bg-[#6B1724] text-white flex items-center justify-center shrink-0 text-xs mt-1">
-                  <Sparkles className="w-3.5 h-3.5 text-[#DFB776] animate-spin" />
+                <div className="w-7 h-7 rounded-full bg-[#8F3F50] text-white flex items-center justify-center shrink-0 text-xs mt-1">
+                  <Sparkles className="w-3.5 h-3.5 text-[#C9A15B] animate-spin" />
                 </div>
-                <div className="bg-white border border-[#DFCDB7] rounded-2xl p-4 text-xs text-[#736359] flex items-center gap-2">
+                <div className="bg-white border border-[#E8D9DC] rounded-2xl p-4 text-xs text-[#5C4E52] flex items-center gap-2">
                   <span className="animate-pulse">Aura Love AI is weaving ideas...</span>
                 </div>
               </div>
@@ -197,13 +197,13 @@ export const LoveAIConciergeModal: React.FC<LoveAIConciergeModalProps> = ({
           </div>
 
           {/* Quick Prompts */}
-          <div className="px-4 py-2 bg-[#F5ECE1]/60 border-t border-[#E5D9C8] flex flex-wrap gap-2">
+          <div className="px-4 py-2 bg-[#F8EDEF]/60 border-t border-[#E8D9DC] flex flex-wrap gap-2">
             {quickPrompts.map((prompt, idx) => (
               <button
                 key={idx}
                 onClick={() => handleSendMessage(prompt)}
                 disabled={isLoading}
-                className="text-[11px] px-2.5 py-1 rounded-full bg-white border border-[#DFCDB7] text-[#52453E] hover:border-[#6B1724] hover:text-[#6B1724] transition-colors cursor-pointer"
+                className="text-[11px] px-2.5 py-1 rounded-full bg-white border border-[#E8D9DC] text-[#5C4E52] hover:border-[#8F3F50] hover:text-[#8F3F50] transition-colors cursor-pointer"
               >
                 {prompt}
               </button>
@@ -211,7 +211,7 @@ export const LoveAIConciergeModal: React.FC<LoveAIConciergeModalProps> = ({
           </div>
 
           {/* Input Box */}
-          <div className="p-4 bg-white border-t border-[#E5D9C8] flex items-center gap-2">
+          <div className="p-4 bg-white border-t border-[#E8D9DC] flex items-center gap-2">
             <input
               type="text"
               value={promptInput}
@@ -220,7 +220,7 @@ export const LoveAIConciergeModal: React.FC<LoveAIConciergeModalProps> = ({
                 if (e.key === 'Enter') handleSendMessage();
               }}
               placeholder="Ask for proposal speech, song list, surprise cues..."
-              className="flex-1 px-4 py-2.5 rounded-full border border-[#DFCDB7] bg-[#FCFAF7] text-xs focus:outline-none focus:border-[#6B1724]"
+              className="flex-1 px-4 py-2.5 rounded-full border border-[#E8D9DC] bg-[#FFFDFB] text-xs focus:outline-none focus:border-[#8F3F50]"
             />
 
             <button
